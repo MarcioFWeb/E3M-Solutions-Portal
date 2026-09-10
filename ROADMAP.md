@@ -38,11 +38,12 @@ Cada item deve ser implementado via uma **SPEC temporária** em `docs/SPECS/`, e
 ## Ciclo 2: Landing Page Institucional & Páginas Estáticas
 *Objetivo: Transformar o portal em uma ferramenta de apresentação e geração de oportunidades para a E3M.*
 
-- [ ] **SPEC-005: Landing Page Completa (Home)**
-  - Hero Section de alto impacto com Glassmorphism e headline clara sobre os 25 anos de experiência.
-  - Seção de Destaques: Cases de Sucesso e Artigos recentes.
-  - Seção de Serviços e Competências (Nuvem, IA, Arquitetura, Squads).
-  - Banners institucionais de conversão: "Tem um projeto?", "Vamos conversar?", "Diagnóstico Gratuito".
+- [x] **SPEC-005: Landing Page Completa & Correção de Roteamento (Base URL)**
+  - Utilitário de caminhos e rotas `src/utils/paths.ts` respeitando `base: '/E3M-Solutions-Portal'`.
+  - Hero Section de alto impacto com Glassmorphism, métricas e headline clara sobre os 25 anos de experiência.
+  - Seção de Especialidades e Serviços em 3 verticais (Modernização em Nuvem, Agentes de IA, FinOps e Governança).
+  - Seção de Artigos Recentes consumindo diretamente os 3 últimos posts da Content Collection.
+  - Banners institucionais de conversão: "Tem um desafio crítico?", "Agende um Diagnóstico Estratégico".
 - [ ] **SPEC-006: Páginas Institucionais**
   - `/sobre`: História da E3M, perfil de liderança de Márcio Figueiredo, filosofia de entrega.
   - `/servicos`: Detalhamento de cada frente de consultoria e engenharia.

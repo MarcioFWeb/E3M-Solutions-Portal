@@ -1,4 +1,5 @@
 ---
+import { getPath } from '../utils/paths';
 ---
 <footer class="mt-auto border-t border-white/10 bg-white/5 backdrop-blur-sm py-8">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -23,8 +24,8 @@
       </div>
 
       <div class="flex space-x-4 text-sm">
-        <a href="/privacidade" class="text-slate-400 hover:text-white transition-colors">Privacidade</a>
-        <a href="/termos" class="text-slate-400 hover:text-white transition-colors">Termos de Uso</a>
+        <a href={getPath('/privacidade')} class="text-slate-400 hover:text-white transition-colors">Privacidade</a>
+        <a href={getPath('/termos')} class="text-slate-400 hover:text-white transition-colors">Termos de Uso</a>
       </div>
     </div>
   </div>

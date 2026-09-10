@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import { getPath } from '../utils/paths';
 
 interface Props {
 	title: string;
@@ -14,8 +15,8 @@ const { title } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="description" content="E3M Solutions — Engenharia de Software, Nuvem & IA descomplicadas." />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
+		<link rel="icon" type="image/svg+xml" href={getPath('/favicon.svg')} />
+		<link rel="icon" href={getPath('/favicon.ico')} />
 		<meta name="generator" content={Astro.generator} />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

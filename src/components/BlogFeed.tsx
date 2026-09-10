@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { getPath } from '../utils/paths';
 
 type BlogPost = {
   id: string;
@@ -84,7 +85,7 @@ export default function BlogFeed({ posts }: BlogFeedProps) {
           {filteredPosts.map((post) => (
             <a
               key={post.id}
-              href={`/blog/${post.id}`}
+              href={getPath(`/blog/${post.id}`)}
               className="glass-card p-6 flex flex-col group hover:-translate-y-1 transition-transform duration-300"
             >
               <div className="flex items-center justify-between mb-4">
