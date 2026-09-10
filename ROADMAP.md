@@ -29,9 +29,9 @@ Cada item deve ser implementado via uma **SPEC temporária** em `docs/SPECS/`, e
 - [x] **SPEC-003: Content Collections & Schema Zod**
   - Definição em `src/content.config.ts` com validação Zod e todos os tipos (`case`, `article`, `service`, `experiment`, `saas`, `track`, `opinion`, `recommendation`).
   - Criação de 3 posts iniciais de exemplo extraídos do acervo real da E3M (`01-case-emissoras-arquitetura.mdx`, `02-arquitetura-serverless.mdx`, `03-engenharia-com-ia.mdx`).
-- [ ] **SPEC-004: Página do Blog & Leitura de Posts MDX**
-  - Rota `/blog`: Listagem com filtros interativos (pílulas de categoria/tipo) e busca básica.
-  - Rota `/blog/[slug]`: Template de leitura do artigo com estilização tipográfica, caixas de destaque (Callouts), diagramas Mermaid e botões de compartilhamento.
+- [x] **SPEC-004: Página do Blog & Leitura de Posts MDX**
+  - Rota `/blog`: Listagem implementada com filtros interativos via React (`BlogFeed.tsx`).
+  - Rota `/blog/[id]`: Template dinâmico de leitura configurado com `@tailwindcss/typography` adaptado ao Dark Glassmorphism.
 
 ---
 

@@ -1,0 +1,102 @@
+---
+import { getCollection, render } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map(post => ({
+    params: { id: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+
+const typeLabels: Record<string, string> = {
+  case: 'Case',
+  article: 'Artigo',
+  opinion: 'Opinião',
+  service: 'Serviço',
+  experiment: 'Experimento',
+  saas: 'SaaS',
+  track: 'Trilha',
+  recommendation: 'Recomendação',
+};
+---
+
+<Layout title={`${post.data.title} | E3M Solutions`}>
+	<Header />
+	
+	<main class="flex-grow pt-32 pb-24">
+		<article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+			<!-- Post Header -->
+			<header class="mb-12 text-center">
+				<div class="mb-6">
+					<span class="text-accent-cyan border border-accent-cyan/30 bg-accent-cyan/10 px-3 py-1 rounded-full text-sm font-semibold uppercase tracking-wider">
+						{typeLabels[post.data.type] || post.data.type}
+					</span>
+				</div>
+				<h1 class="text-3xl md:text-5xl font-extrabold mb-6 leading-tight text-white">
+					{post.data.title}
+				</h1>
+				<div class="flex items-center justify-center space-x-4 text-slate-400 text-sm">
+					<div class="flex items-center">
+						<svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+						{post.data.author}
+					</div>
+					<span>&bull;</span>
+					<div class="flex items-center">
+						<svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+						<time datetime={post.data.pubDate.toISOString()}>
+							{new Date(post.data.pubDate).toLocaleDateString('pt-BR', {
+								day: '2-digit',
+								month: 'long',
+								year: 'numeric'
+							})}
+						</time>
+					</div>
+				</div>
+			</header>
+
+			<!-- Hero Image Placeholder -->
+			{post.data.heroImage && (
+				<div class="mb-12 rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+					<img src={post.data.heroImage} alt={post.data.title} class="w-full h-auto object-cover" />
+				</div>
+			)}
+
+			<!-- Post Content (MDX) -->
+			<div class="prose prose-invert prose-lg prose-cyan max-w-none 
+						prose-headings:font-bold prose-h1:text-4xl prose-h2:text-2xl 
+						prose-a:text-accent-cyan hover:prose-a:text-accent-violet
+						prose-pre:border prose-pre:border-white/10 prose-pre:bg-[#0d1117]
+						prose-blockquote:border-l-accent-cyan prose-blockquote:bg-white/5 prose-blockquote:py-1 prose-blockquote:px-4 prose-blockquote:rounded-r-lg prose-blockquote:not-italic prose-blockquote:text-slate-300
+						glass-panel p-8 sm:p-12 rounded-2xl">
+				<Content />
+			</div>
+
+			<!-- Post Footer / Tags -->
+			{post.data.tags && post.data.tags.length > 0 && (
+				<div class="mt-12 flex flex-wrap gap-2">
+					{post.data.tags.map(tag => (
+						<a href={`/tags/${tag}`} class="text-sm text-slate-300 bg-white/5 hover:bg-white/10 border border-white/10 px-3 py-1.5 rounded-md transition-colors">
+							#{tag}
+						</a>
+					))}
+				</div>
+			)}
+
+			<div class="mt-16 text-center border-t border-white/10 pt-10">
+				<a href="/blog" class="inline-flex items-center text-slate-300 hover:text-white transition-colors">
+					<svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+					Voltar para o Blog
+				</a>
+			</div>
+		</article>
+	</main>
+
+	<Footer />
+</Layout>

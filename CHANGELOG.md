@@ -14,3 +14,4 @@ O formato baseia-se em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0
 - CHANGELOG.md e README.md.
 - Implementação de Content Collections do Astro (`src/content.config.ts`) com validação estrita via Zod [SPEC-003].
 - Adição dos 3 primeiros artigos MDX do acervo E3M (`case`, `article`, `opinion`).
+- Criação das rotas de Blog (`/blog` e `/blog/[id]`) com filtro em React (`BlogFeed.tsx`) e renderização tipográfica (`@tailwindcss/typography`) adaptada ao design Glassmorphism [SPEC-004].

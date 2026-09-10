@@ -1,0 +1,34 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import BlogFeed from '../../components/BlogFeed';
+import { getCollection } from 'astro:content';
+
+const allPosts = await getCollection('blog');
+const sortedPosts = allPosts.sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+---
+
+<Layout title="Blog & Insights | E3M Solutions">
+	<Header />
+	
+	<main class="flex-grow pt-32 pb-16">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center max-w-3xl mx-auto mb-16">
+				<h1 class="text-4xl md:text-5xl font-extrabold mb-6">
+					Artigos, Cases e <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-cyan to-accent-violet">Reflexões</span>
+				</h1>
+				<p class="text-lg text-slate-300">
+					Compartilhamos nosso conhecimento, visão estratégica e experiências reais 
+					sobre engenharia de software, nuvem e inovação com inteligência artificial.
+				</p>
+			</div>
+
+			<BlogFeed posts={sortedPosts} client:load />
+		</div>
+	</main>
+
+	<Footer />
+</Layout>
