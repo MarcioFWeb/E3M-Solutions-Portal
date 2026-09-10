@@ -5,7 +5,7 @@ Cada item deve ser implementado via uma **SPEC temporária** em `docs/SPECS/`, e
 
 ---
 
-## Ciclo 0: Fundação Mínima & Ativação Remota (Em Andamento)
+## Ciclo 0: Fundação Mínima & Ativação Remota (Concluído)
 *Objetivo: Estabelecer a aplicação básica funcional, layout inicial e pipeline de deploy contínuo em GitHub Pages.*
 
 - [x] **Setup Estrutural**: Criação das pastas de governança (PRD, HLD, LLD, SPECS, ADR) e Agent Harness.
