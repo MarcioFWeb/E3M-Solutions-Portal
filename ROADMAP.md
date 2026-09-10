@@ -14,7 +14,7 @@ Cada item deve ser implementado via uma **SPEC temporária** em `docs/SPECS/`, e
 - [x] **SPEC-001: Layout Global e Página Base Minimalista**
   - Criação do Layout Astro mestre (`src/layouts/Layout.astro`) com fontes Inter/Roboto, import de `global.css`, Header Glassmorphism e Footer básico.
   - Página Home temporária (`src/pages/index.astro`) exibindo o título, proposta da E3M e menu de navegação.
-- [ ] **SPEC-002: Inicialização Git, Conexão com Repositório Remoto e Deploy Inicial**
+- [x] **SPEC-002: Inicialização Git, Conexão com Repositório Remoto e Deploy Inicial**
   - Inicialização do repositório Git local.
   - Adição de `.gitignore` completo para Node/Astro/IDE.
   - Commit inicial estrutural.
