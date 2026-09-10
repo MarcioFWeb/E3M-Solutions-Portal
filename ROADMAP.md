@@ -26,9 +26,9 @@ Cada item deve ser implementado via uma **SPEC temporária** em `docs/SPECS/`, e
 ## Ciclo 1: Sistema de Conteúdo e Feed do Blog
 *Objetivo: Estruturar a Content Collection com validação Zod e permitir a publicação de artigos, cases e tutoriais.*
 
-- [ ] **SPEC-003: Content Collections & Schema Zod**
-  - Definição em `src/content/config.ts` com todos os tipos (`case`, `article`, `service`, `experiment`, `saas`, `track`, `opinion`, `recommendation`).
-  - Migração/curadoria de 3 posts iniciais de exemplo extraídos do acervo real da E3M (ex: Case Emissoras, Artigo Cloud/Serverless, Artigo IA/Automação).
+- [x] **SPEC-003: Content Collections & Schema Zod**
+  - Definição em `src/content.config.ts` com validação Zod e todos os tipos (`case`, `article`, `service`, `experiment`, `saas`, `track`, `opinion`, `recommendation`).
+  - Criação de 3 posts iniciais de exemplo extraídos do acervo real da E3M (`01-case-emissoras-arquitetura.mdx`, `02-arquitetura-serverless.mdx`, `03-engenharia-com-ia.mdx`).
 - [ ] **SPEC-004: Página do Blog & Leitura de Posts MDX**
   - Rota `/blog`: Listagem com filtros interativos (pílulas de categoria/tipo) e busca básica.
   - Rota `/blog/[slug]`: Template de leitura do artigo com estilização tipográfica, caixas de destaque (Callouts), diagramas Mermaid e botões de compartilhamento.

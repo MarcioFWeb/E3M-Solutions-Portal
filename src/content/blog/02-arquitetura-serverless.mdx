@@ -1,0 +1,38 @@
+---
+title: "Arquitetura Serverless Pragmática: Maximizando Eficiência e Reduzindo Custos"
+description: "Uma análise prática sobre a utilização de Cloud Run e Cloud Functions para construir sistemas com escala automática a zero e redução drástica de TCO."
+pubDate: 2026-03-05
+author: "Márcio Figueiredo"
+type: "article"
+tags: ["Serverless", "Cloud Run", "DevOps", "FinOps"]
+---
+
+# A Maturidade do Paradigma Serverless
+
+Serverless há muito deixou de ser apenas a execução de pequenas funções sem estado com limites severos de timeout. Hoje, soluções como **Google Cloud Run** e containers serverless permitem executar qualquer stack conteinerizada com controle granular de concorrência, cold starts desprezíveis e escalonamento até zero (*scale to zero*).
+
+## Por que Serverless baseado em Containers?
+
+Ao desacoplar o código da infraestrutura sem se prender a runtimes proprietários, obtemos:
+
+- **Portabilidade Total:** O que roda em um Dockerfile local roda exatamente igual na nuvem.
+- **Concorrência por Instância:** No Cloud Run, uma única instância pode atender até centenas de requisições simultâneas, otimizando drasticamente a memória alocada.
+- **FinOps Nativo:** Paga-se apenas pelo tempo de CPU e memória consumidos durante o processamento ativo das requisições.
+
+## Exemplo de Configuração e Deployment
+
+Com uma simples instrução declarativa, o serviço pode ser instanciado e gerenciado:
+
+```bash
+gcloud run deploy api-portal \
+  --image gcr.io/e3m-core/api:latest \
+  --platform managed \
+  --region southamerica-east1 \
+  --min-instances 0 \
+  --max-instances 20 \
+  --concurrency 80
+```
+
+## Conclusão
+
+Para mais de 80% das APIs corporativas e microsserviços modernos, clusters Kubernetes dedicados representam sobrecarga operacional desnecessária. O modelo serverless baseado em containers oferece o equilíbrio ideal entre velocidade de entrega e sustentabilidade financeira.

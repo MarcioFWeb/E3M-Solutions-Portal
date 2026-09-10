@@ -12,3 +12,5 @@ O formato baseia-se em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0
 - Estrutura de documentação (SPECS, ADR, HLD, LLD).
 - ROADMAP.md refinado por Ciclos e sequenciamento de SPECs (SPEC-001 a SPEC-008).
 - CHANGELOG.md e README.md.
+- Implementação de Content Collections do Astro (`src/content.config.ts`) com validação estrita via Zod [SPEC-003].
+- Adição dos 3 primeiros artigos MDX do acervo E3M (`case`, `article`, `opinion`).

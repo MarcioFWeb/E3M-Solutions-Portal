@@ -1,0 +1,41 @@
+---
+title: "Escalabilidade na Nuvem e Processamento de Vídeo para Emissoras de Grande Porte"
+description: "Como desenhamos arquiteturas resilientes e de alta vazão para ingestão, transcodificação e distribuição de streaming de vídeo ao vivo e sob demanda."
+pubDate: 2026-03-01
+author: "Márcio Figueiredo"
+type: "case"
+tags: ["Cloud", "Streaming", "Arquitetura", "GCP", "AWS"]
+---
+
+# Desafio: Ingestão e Distribuição em Alta Concorrência
+
+Grandes grupos de mídia e radiodifusão enfrentam picos brutais de audiência durante transmissões de eventos ao vivo, eleições e coberturas esportivas. O desafio consiste em garantir ingestão ininterrupta, transcodificação adaptativa (ABR) em múltiplos bitrates e entrega via CDN com latência ultrabaixa.
+
+## A Arquitetura Implementada
+
+Para atender à demanda com máxima resiliência e custo otimizado, desenhamos um pipeline distribuído em nuvem:
+
+```
+[ Ingestão RTMP/SRT ]
+         │
+         ▼
+[ Cluster de Transcodificação Auto-scalable ] ──▶ [ Empacotamento HLS / DASH ]
+                                                              │
+                                                              ▼
+                                                   [ Origin Shield & CDNs ]
+                                                              │
+                                                              ▼
+                                                   [ Consumidor Final ]
+```
+
+### Pilares da Solução
+
+1. **Auto-scaling Preditivo e Reativo:** provisionamento dinâmico de instâncias com base em métricas de saturação de CPU e buffers de fila.
+2. **Multi-CDN com Failover Automático:** orquestração de DNS inteligente com alternância de borda caso uma rede apresente degradação de throughput.
+3. **Observabilidade em Tempo Real:** telemetria de QoS (Quality of Service) e QoE (Quality of Experience) direto nos reprodutores das aplicações finais.
+
+## Resultados Atingidos
+
+- **99.99% de disponibilidade** durante picos com mais de 500 mil conexões simultâneas.
+- **Redução de 34% nos custos de CDN** através de caching hierárquico e origin shielding.
+- Tempo de inicialização do vídeo (time-to-first-frame) inferior a 1,2 segundos.
