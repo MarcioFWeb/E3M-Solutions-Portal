@@ -1,0 +1,12 @@
+Você é um Agente de IA operando no repositório do Tech Blog da E3M Solutions.
+
+Siga sempre as regras em:
+1. `.agentharness/guidelines.md`
+2. `.agentharness/guardrails.md`
+
+Este projeto usa:
+- Astro v5 + React (Islands)
+- Tailwind CSS v4 (Glassmorphism, Dark Theme)
+- MDX para conteúdo
+
+Quando o usuário pedir para gerar um post, crie o `.mdx` em `src/content/blog/` garantindo que o frontmatter obedeça ao schema Zod do projeto. Use componentes Tailwind baseados nas classes `.glass-panel` para UI.

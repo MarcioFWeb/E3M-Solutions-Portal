@@ -1,0 +1,36 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --font-sans: "Inter", "Roboto", sans-serif;
+  
+  --color-slate-900: #0f172a;
+  --color-midnight: #020617;
+  
+  --color-accent-cyan: #06b6d4;
+  --color-accent-violet: #8b5cf6;
+}
+
+@layer base {
+  body {
+    @apply bg-midnight text-slate-400 font-sans antialiased;
+    /* Basic ambient background for the glass effect to be visible */
+    background-image: radial-gradient(circle at 15% 50%, rgba(6, 182, 212, 0.15), transparent 25%),
+                      radial-gradient(circle at 85% 30%, rgba(139, 92, 246, 0.15), transparent 25%);
+    background-attachment: fixed;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-slate-50 font-bold tracking-tight;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-white/5 backdrop-blur-md border border-white/10 shadow-xl rounded-xl;
+  }
+  
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-md border border-white/10 shadow-xl rounded-xl transition-all duration-300 hover:bg-white/10 hover:border-white/20 hover:shadow-2xl hover:-translate-y-1;
+  }
+}
