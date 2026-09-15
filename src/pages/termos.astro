@@ -1,0 +1,94 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Termos de Uso & Condições | E3M Solutions">
+	<Header />
+	
+	<main class="flex-grow pt-32 pb-24">
+		<article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+			<!-- Header -->
+			<header class="mb-12 text-center">
+				<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-violet/10 border border-accent-violet/20 text-accent-violet text-xs font-semibold uppercase tracking-wider mb-4">
+					Condições Gerais & Governança
+				</div>
+				<h1 class="text-3xl md:text-5xl font-extrabold mb-4 text-white">
+					Termos de Uso e Condições Gerais
+				</h1>
+				<p class="text-slate-400 text-sm">
+					Última atualização: Setembro de 2026 &bull; Aplicável aos serviços e navegação da E3M Solutions
+				</p>
+			</header>
+
+			<!-- Conteúdo Legal Estruturado -->
+			<div class="prose prose-invert prose-lg prose-cyan max-w-none 
+						prose-headings:font-bold prose-h1:text-3xl prose-h2:text-2xl 
+						prose-a:text-accent-cyan hover:prose-a:text-accent-violet
+						prose-pre:border prose-pre:border-white/10 prose-pre:bg-[#0d1117]
+						prose-blockquote:border-l-accent-cyan prose-blockquote:bg-white/5 prose-blockquote:py-1 prose-blockquote:px-4 prose-blockquote:rounded-r-lg prose-blockquote:not-italic prose-blockquote:text-slate-300
+						glass-panel p-8 sm:p-12 rounded-2xl">
+				
+				<h2>1. Aceitação dos Termos</h2>
+				<p>
+					Ao acessar e utilizar este portal, bem como ao contratar quaisquer serviços oferecidos pela <strong>E3M Solutions</strong> ("E3M"), você concorda expressamente com os presentes Termos de Uso e Condições Gerais de Prestação de Serviços de Tecnologia da Informação. Caso não concorde com qualquer disposição aqui contida, solicitamos que não prossiga com a navegação ou solicitação de propostas.
+				</p>
+
+				<h2>2. Objeto e Âmbito de Atuação</h2>
+				<p>
+					A E3M Solutions é uma consultoria e empresa de engenharia de software especializada em:
+				</p>
+				<ul>
+					<li>Desenvolvimento de arquiteturas de software, plataformas SaaS e soluções em nuvem;</li>
+					<li>Concepção, orquestração e implantação de ecossistemas agênticos e Inteligência Artificial generativa;</li>
+					<li>Mentoria técnica, liderança de equipes e consultoria executiva (CTO as a Service);</li>
+					<li>Staff Augmentation com acompanhamento técnico contínuo;</li>
+					<li>Automação de atendimento corporativo, omnichannel e WhatsApp API;</li>
+					<li>Parcerias técnicas em licitações públicas e editais de inovação.</li>
+				</ul>
+
+				<h2>3. Propriedade Intelectual e Transferência de Ativos</h2>
+				<p>
+					Diferente de modelos tradicionais que geram amarras tecnológicas forçadas (lock-in), a E3M opera sob o princípio da <strong>autonomia e soberania do cliente</strong>:
+				</p>
+				<ol>
+					<li><strong>Conteúdos Institucionais do Portal:</strong> Todas as marcas, logotipos, textos, artigos e identidade visual deste portal pertencem exclusivamente à E3M Solutions e estão protegidos pelas leis de direitos autorais e propriedade industrial.</li>
+					<li><strong>Código e Soluções Customizadas para Clientes:</strong> Todo código-fonte, arquitetura, automação e documentação desenvolvidos sob demanda para o contratante tornam-se de propriedade integral do cliente mediante a quitação das etapas contratuais acordadas, salvo expressa disposição em contrário em contrato específico.</li>
+				</ol>
+
+				<h2>4. Confidencialidade e Sigilo Rigoroso (NDA)</h2>
+				<p>
+					Reconhecemos a natureza sensível e estratégica dos negócios e das informações de tecnologia dos nossos parceiros. Todas as informações comerciais, regras de negócio, dados proprietários, credenciais e códigos compartilhados durante sessões de diagnóstico ou na execução dos projetos são tratados sob rigorosa confidencialidade, não podendo ser divulgados a terceiros sem prévia autorização formal.
+				</p>
+
+				<h2>5. Limitação de Responsabilidade</h2>
+				<p>
+					A E3M Solutions emprega as melhores práticas de engenharia de software, testes e segurança cibernética. Contudo, não nos responsabilizamos por indisponibilidades causadas por falhas de terceiros (como provedores de telecomunicações ou interrupções globais de nuvens públicas), ataques de força maior ou uso indevido de credenciais e sistemas por parte do cliente ou seus colaboradores.
+				</p>
+
+				<h2>6. Sessões de Diagnóstico Técnico Gratuito</h2>
+				<p>
+					O agendamento da call de diagnóstico estratégico gratuito (30 minutos) tem caráter consultivo inicial e não estabelece vínculo contratual perpétuo ou obrigação de contratação futura por qualquer uma das partes. As recomendações fornecidas baseiam-se nas informações preliminares apresentadas pelo solicitante.
+				</p>
+
+				<h2>7. Alterações destes Termos</h2>
+				<p>
+					A E3M Solutions reserva-se o direito de atualizar estes Termos periodicamente para refletir melhorias contínuas em seus serviços ou adequações regulatórias. A data da versão mais recente estará sempre indicada no topo desta página.
+				</p>
+
+				<h2>8. Foro de Eleição</h2>
+				<p>
+					Para a resolução de eventuais litígios decorrentes do uso deste portal ou da interpretação destes Termos, fica eleito o Foro da Comarca da sede da E3M Solutions no Brasil, com renúncia expressa a qualquer outro, por mais privilegiado que seja.
+				</p>
+
+				<blockquote>
+					<strong>Dúvidas Contratuais ou Comerciais:</strong> <a href="mailto:contato@e3m.dev.br">contato@e3m.dev.br</a><br/>
+					E3M Solutions &bull; Engenharia de Software, Nuvem & IA
+				</blockquote>
+			</div>
+		</article>
+	</main>
+
+	<Footer />
+</Layout>

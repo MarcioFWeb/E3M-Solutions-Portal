@@ -1,0 +1,135 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { getPath } from '../utils/paths';
+import { getCollection } from 'astro:content';
+
+const allPosts = await getCollection('blog');
+const casePosts = allPosts
+  .filter((post) => post.data.type === 'case')
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+// Se houver poucos posts marcados como 'case', exibimos também outros cases/artigos em destaque
+const otherPosts = allPosts
+  .filter((post) => post.data.type !== 'case')
+  .slice(0, 3);
+---
+
+<Layout title="Cases de Sucesso & Estudos de Caso | E3M Solutions">
+	<Header />
+	
+	<main class="flex-grow pt-24 pb-20 overflow-hidden">
+		<!-- Hero Section -->
+		<section class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-16 md:pt-20 md:pb-20 text-center">
+			<div class="absolute -top-10 left-1/2 -translate-x-1/2 w-3/4 max-w-3xl h-96 bg-gradient-to-tr from-accent-cyan/15 to-accent-violet/15 blur-3xl pointer-events-none -z-10 rounded-full"></div>
+
+			<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-panel text-sm font-medium text-slate-300 mb-6 border border-white/10">
+				<span class="w-2 h-2 rounded-full bg-accent-cyan animate-pulse"></span>
+				Resultados Comprovados em Produção
+			</div>
+
+			<h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-6 leading-tight text-white max-w-3xl mx-auto">
+				Estudos de Caso & <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-cyan via-blue-400 to-accent-violet">Histórias Reais de Sucesso</span>
+			</h1>
+
+			<p class="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
+				Veja como aplicamos nossa bagagem técnica de mais de 30 anos para solucionar gargalos de escala, modernizar legados e acelerar operações com Inteligência Artificial.
+			</p>
+		</section>
+
+		<!-- Lista de Cases -->
+		<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+			{casePosts.length > 0 ? (
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+					{casePosts.map((post) => (
+						<a 
+							href={getPath(`/blog/${post.id}`)}
+							class="glass-card p-6 flex flex-col group hover:-translate-y-1 transition-all duration-300"
+						>
+							<div class="flex items-center justify-between mb-4">
+								<span class="text-xs font-semibold px-2.5 py-0.5 rounded-md border bg-blue-500/20 text-blue-300 border-blue-500/30">
+									Case de Sucesso
+								</span>
+								<span class="text-xs text-slate-400">
+									{new Date(post.data.pubDate).toLocaleDateString('pt-BR', {
+										day: '2-digit',
+										month: 'short',
+										year: 'numeric'
+									})}
+								</span>
+							</div>
+							<h3 class="text-xl font-bold mb-3 text-white group-hover:text-accent-cyan transition-colors">
+								{post.data.title}
+							</h3>
+							<p class="text-slate-400 text-sm flex-grow mb-6 line-clamp-3">
+								{post.data.description}
+							</p>
+							<div class="flex items-center text-xs font-semibold text-accent-cyan mt-auto">
+								<span>Ler estudo completo</span>
+								<svg class="w-3.5 h-3.5 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+							</div>
+						</a>
+					))}
+				</div>
+			) : (
+				<div class="glass-panel p-12 text-center rounded-3xl">
+					<p class="text-slate-300">Novos estudos de caso estão sendo documentados e serão publicados em breve.</p>
+				</div>
+			)}
+		</section>
+
+		<!-- Seção de Artigos e Reflexões Relacionadas -->
+		{otherPosts.length > 0 && (
+			<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+				<div class="flex flex-col md:flex-row justify-between items-baseline mb-8">
+					<div>
+						<h2 class="text-xs uppercase tracking-widest text-accent-cyan font-bold mb-2">Artigos Técnicos</h2>
+						<p class="text-2xl font-bold text-white">Outras Publicações & Insights</p>
+					</div>
+					<a href={getPath('/blog')} class="text-sm font-semibold text-accent-cyan hover:text-white transition-colors mt-2 md:mt-0">
+						Ver todos no Blog &rarr;
+					</a>
+				</div>
+
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+					{otherPosts.map((post) => (
+						<a 
+							href={getPath(`/blog/${post.id}`)}
+							class="glass-card p-6 flex flex-col group hover:-translate-y-1 transition-all duration-300"
+						>
+							<h3 class="text-lg font-bold mb-2 text-white group-hover:text-accent-cyan transition-colors line-clamp-2">
+								{post.data.title}
+							</h3>
+							<p class="text-slate-400 text-xs flex-grow mb-4 line-clamp-2">
+								{post.data.description}
+							</p>
+							<span class="text-xs text-accent-cyan font-semibold mt-auto">Acessar &rarr;</span>
+						</a>
+					))}
+				</div>
+			</section>
+		)}
+
+		<!-- Banner de Conversão -->
+		<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+			<div class="glass-panel p-8 md:p-12 rounded-3xl border border-white/15 text-center">
+				<h2 class="text-2xl md:text-4xl font-bold text-white mb-4">
+					Quer que o próximo case de sucesso seja da sua empresa?
+				</h2>
+				<p class="text-slate-300 text-base md:text-lg mb-8 max-w-2xl mx-auto">
+					Vamos analisar seu cenário atual e desenhar uma estratégia pragmática com retorno mensurável.
+				</p>
+				<a 
+					href={getPath('/contato')} 
+					class="inline-flex items-center gap-2 px-8 py-4 font-semibold text-white bg-gradient-to-r from-accent-cyan to-accent-violet rounded-xl shadow-lg shadow-accent-cyan/20 hover:opacity-95 transition-all"
+				>
+					Agendar Diagnóstico Gratuito
+					<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+				</a>
+			</div>
+		</section>
+	</main>
+
+	<Footer />
+</Layout>

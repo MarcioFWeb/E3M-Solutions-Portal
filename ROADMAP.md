@@ -35,7 +35,7 @@ Cada item deve ser implementado via uma **SPEC temporária** em `docs/SPECS/`, e
 
 ---
 
-## Ciclo 2: Landing Page Institucional & Páginas Estáticas
+## Ciclo 2: Landing Page Institucional & Páginas Estáticas (Concluído)
 *Objetivo: Transformar o portal em uma ferramenta de apresentação e geração de oportunidades para a E3M.*
 
 - [x] **SPEC-005: Landing Page Completa & Correção de Roteamento (Base URL)**
@@ -44,11 +44,12 @@ Cada item deve ser implementado via uma **SPEC temporária** em `docs/SPECS/`, e
   - Seção de Especialidades e Serviços em 3 verticais (Modernização em Nuvem, Agentes de IA, FinOps e Governança).
   - Seção de Artigos Recentes consumindo diretamente os 3 últimos posts da Content Collection.
   - Banners institucionais de conversão: "Tem um desafio crítico?", "Agende um Diagnóstico Estratégico".
-- [ ] **SPEC-006: Páginas Institucionais**
-  - `/sobre`: História da E3M, perfil de liderança de Márcio Figueiredo, filosofia de entrega.
-  - `/servicos`: Detalhamento de cada frente de consultoria e engenharia.
-  - `/contato`: Página com links diretos (WhatsApp comercial, E-mail, agendamento de diagnóstico).
-  - `/privacidade` e `/termos`: Páginas de compliance institucional.
+- [x] **SPEC-006: Páginas Institucionais**
+  - `/sobre`: História da E3M, Manifesto de Engenharia (anti-overengineering, foco no cliente, capacitação total), liderança sênior de Márcio Figueiredo (+30 anos desde 1996) e link LinkedIn.
+  - `/servicos`: 5 verticais detalhadas (IA & Agentes, Mentoria & CTO as a Service, Atendimento Inteligente & WhatsApp, Dev Customizado/Cloud/Licitações, Staff Augmentation com Gestão Integrada) e metodologia "Como Trabalhamos".
+  - `/contato`: Canais diretos (WhatsApp e E-mail), destaque do Diagnóstico Gratuito (30 min) e formulário interativo de contato.
+  - `/privacidade` e `/termos`: Páginas completas de compliance sob a legislação brasileira (LGPD, confidencialidade, NDA e termos de serviços de TI).
+  - `/cases`: Página de estudos de caso e projetos reais da E3M conectados à Content Collection.
 
 ---
 

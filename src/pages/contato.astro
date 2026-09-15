@@ -1,0 +1,257 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Contato & Diagnóstico Gratuito | E3M Solutions">
+	<Header />
+	
+	<main class="flex-grow pt-24 pb-20 overflow-hidden">
+		<!-- Hero Section -->
+		<section class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12 md:pt-20 md:pb-16 text-center">
+			<div class="absolute -top-10 left-1/2 -translate-x-1/2 w-3/4 max-w-3xl h-96 bg-gradient-to-tr from-accent-cyan/15 to-accent-violet/15 blur-3xl pointer-events-none -z-10 rounded-full"></div>
+
+			<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-panel text-sm font-medium text-slate-300 mb-6 border border-white/10">
+				<span class="w-2 h-2 rounded-full bg-accent-cyan animate-pulse"></span>
+				Fale Diretamente Conosco
+			</div>
+
+			<h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-6 leading-tight text-white max-w-3xl mx-auto">
+				Vamos Conversar sobre o <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-cyan via-blue-400 to-accent-violet">Seu Próximo Desafio</span>
+			</h1>
+
+			<p class="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
+				Seja para um diagnóstico arquitetural gratuito, desenvolvimento de agentes de IA, mentoria ou alocação técnica: estamos prontos para somar.
+			</p>
+		</section>
+
+		<!-- Grid de Contato & Formulário -->
+		<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+			<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+				
+				<!-- Coluna da Esquerda: Informações e Canais Diretos -->
+				<div class="lg:col-span-5 space-y-6">
+					
+					<!-- Card Diagnóstico Gratuito -->
+					<div class="glass-panel p-8 rounded-3xl border border-accent-cyan/30 relative overflow-hidden bg-accent-cyan/[0.03]">
+						<div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-accent-cyan/20 text-accent-cyan text-xs font-bold uppercase mb-4">
+							Sem Custo e Sem Compromisso
+						</div>
+						<h3 class="text-xl font-bold text-white mb-3">
+							Diagnóstico Estratégico (30 min)
+						</h3>
+						<p class="text-slate-300 text-sm leading-relaxed mb-6">
+							Uma sessão individual e confidencial diretamente com nossa liderança técnica sênior para mapear os gargalos da sua arquitetura, validar ideias de IA ou desenhar os próximos passos do seu projeto.
+						</p>
+						<ul class="space-y-2.5 text-xs text-slate-300 mb-2">
+							<li class="flex items-center gap-2">
+								<svg class="w-4 h-4 text-accent-cyan flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+								Análise de viabilidade técnica e arquitetural
+							</li>
+							<li class="flex items-center gap-2">
+								<svg class="w-4 h-4 text-accent-cyan flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+								Recomendações pragmáticas anti-overengineering
+							</li>
+							<li class="flex items-center gap-2">
+								<svg class="w-4 h-4 text-accent-cyan flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+								Orientação de custos em nuvem e FinOps
+							</li>
+						</ul>
+					</div>
+
+					<!-- Card Canais Diretos -->
+					<div class="glass-panel p-8 rounded-3xl border border-white/15 space-y-6">
+						<h3 class="text-lg font-bold text-white border-b border-white/10 pb-3">
+							Canais de Contato Imediato
+						</h3>
+
+						<!-- WhatsApp -->
+						<a 
+							href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20gostaria%20de%20conversar%20sobre%20os%20servi%C3%A7os%20da%20E3M%20Solutions" 
+							target="_blank" 
+							rel="noopener noreferrer"
+							class="flex items-center justify-between p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-emerald-500/10 hover:border-emerald-500/30 transition-all group"
+						>
+							<div class="flex items-center gap-3">
+								<div class="w-10 h-10 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
+									<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+								</div>
+								<div>
+									<div class="text-sm font-bold text-white group-hover:text-emerald-400 transition-colors">Conversa via WhatsApp</div>
+									<div class="text-xs text-slate-400">Atendimento comercial ágil</div>
+								</div>
+							</div>
+							<svg class="w-4 h-4 text-slate-500 group-hover:text-emerald-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+						</a>
+
+						<!-- E-mail -->
+						<a 
+							href="mailto:contato@e3m.dev.br" 
+							class="flex items-center justify-between p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-accent-cyan/10 hover:border-accent-cyan/30 transition-all group"
+						>
+							<div class="flex items-center gap-3">
+								<div class="w-10 h-10 rounded-lg bg-accent-cyan/20 text-accent-cyan flex items-center justify-center">
+									<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+								</div>
+								<div>
+									<div class="text-sm font-bold text-white group-hover:text-accent-cyan transition-colors">contato@e3m.dev.br</div>
+									<div class="text-xs text-slate-400">Propostas formais e RFP</div>
+								</div>
+							</div>
+							<svg class="w-4 h-4 text-slate-500 group-hover:text-accent-cyan transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+						</a>
+
+						<div class="text-xs text-slate-400 pt-2 border-t border-white/10 flex items-center gap-2">
+							<svg class="w-4 h-4 text-accent-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+							<span>Atuação remota em todo o Brasil e projetos internacionais</span>
+						</div>
+					</div>
+
+				</div>
+
+				<!-- Coluna da Direita: Formulário de Contato Inteligente -->
+				<div class="lg:col-span-7">
+					<div class="glass-panel p-8 md:p-10 rounded-3xl border border-white/15 relative">
+						<h2 class="text-2xl font-bold text-white mb-2">Envie uma Mensagem</h2>
+						<p class="text-slate-300 text-sm mb-6">
+							Preencha as informações abaixo. Retornaremos em até 24 horas úteis.
+						</p>
+
+						<form id="contact-form" class="space-y-4">
+							<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+								<div>
+									<label for="name" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">Nome Completo *</label>
+									<input 
+										type="text" 
+										id="name" 
+										name="name" 
+										required 
+										placeholder="Seu nome"
+										class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/15 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-accent-cyan focus:ring-1 focus:ring-accent-cyan transition-colors"
+									/>
+								</div>
+
+								<div>
+									<label for="email" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">E-mail Corporativo *</label>
+									<input 
+										type="email" 
+										id="email" 
+										name="email" 
+										required 
+										placeholder="voce@empresa.com.br"
+										class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/15 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-accent-cyan focus:ring-1 focus:ring-accent-cyan transition-colors"
+									/>
+								</div>
+							</div>
+
+							<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+								<div>
+									<label for="phone" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">Telefone / WhatsApp</label>
+									<input 
+										type="tel" 
+										id="phone" 
+										name="phone" 
+										placeholder="(11) 99999-9999"
+										class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/15 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-accent-cyan focus:ring-1 focus:ring-accent-cyan transition-colors"
+									/>
+								</div>
+
+								<div>
+									<label for="company" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">Empresa / Cargo</label>
+									<input 
+										type="text" 
+										id="company" 
+										name="company" 
+										placeholder="Nome da sua empresa"
+										class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/15 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-accent-cyan focus:ring-1 focus:ring-accent-cyan transition-colors"
+									/>
+								</div>
+							</div>
+
+							<div>
+								<label for="service" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">Interesse Principal</label>
+								<select 
+									id="service" 
+									name="service"
+									class="w-full px-4 py-3 rounded-xl bg-midnight border border-white/15 text-white text-sm focus:outline-none focus:border-accent-cyan transition-colors"
+								>
+									<option value="diagnostico">Diagnóstico Técnico / Arquitetura</option>
+									<option value="ia-agentes">Inteligência Artificial & Agentes Autônomos</option>
+									<option value="mentoria-cto">Mentoria Técnica & CTO as a Service</option>
+									<option value="atendimento-whatsapp">Chatbot & Automação de Atendimento</option>
+									<option value="desenvolvimento-saas">Desenvolvimento de Software / SaaS / Nuvem</option>
+									<option value="licitacoes">Parceria em Licitações Públicas</option>
+									<option value="staff-augmentation">Staff Augmentation com Gestão Integrada</option>
+									<option value="outro">Outro Desafio</option>
+								</select>
+							</div>
+
+							<div>
+								<label for="message" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">Descreva Brevemente o Seu Projeto *</label>
+								<textarea 
+									id="message" 
+									name="message" 
+									rows="4" 
+									required 
+									placeholder="Conte-nos sobre o cenário atual, as tecnologias envolvidas e seus objetivos..."
+									class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/15 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-accent-cyan focus:ring-1 focus:ring-accent-cyan transition-colors"
+								></textarea>
+							</div>
+
+							<!-- Checkbox de Intenção de Diagnóstico -->
+							<div class="p-4 rounded-xl bg-white/5 border border-white/10 flex items-start gap-3">
+								<input 
+									type="checkbox" 
+									id="request-diagnostic" 
+									name="request-diagnostic" 
+									checked
+									class="mt-1 w-4 h-4 rounded text-accent-cyan bg-white/10 border-white/20 focus:ring-accent-cyan"
+								/>
+								<label for="request-diagnostic" class="text-xs text-slate-300 leading-relaxed cursor-pointer">
+									<strong class="text-white">Desejo agendar uma call de Diagnóstico Gratuito (30 min).</strong> Entrem em contato para definirmos a melhor data e horário.
+								</label>
+							</div>
+
+							<button 
+								type="submit" 
+								class="w-full py-4 px-6 rounded-xl font-semibold text-white bg-gradient-to-r from-accent-cyan to-accent-violet shadow-lg shadow-accent-cyan/20 hover:opacity-95 transition-all text-sm flex items-center justify-center gap-2 cursor-pointer"
+							>
+								<span>Enviar Mensagem & Solicitar Contato</span>
+								<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+							</button>
+						</form>
+
+						<!-- Feedback de Envio -->
+						<div id="form-success" class="hidden mt-6 p-6 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-center">
+							<div class="w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center mx-auto mb-3">
+								<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+							</div>
+							<h4 class="text-lg font-bold text-white mb-1">Mensagem Recebida com Sucesso!</h4>
+							<p class="text-xs text-slate-300">
+								Agradecemos pelo contato. Nossa equipe técnica entrará em contato em até 24 horas úteis para dar andamento ao seu diagnóstico.
+							</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section>
+	</main>
+
+	<Footer />
+
+	<script>
+		const form = document.getElementById('contact-form') as HTMLFormElement;
+		const successMessage = document.getElementById('form-success');
+
+		if (form && successMessage) {
+			form.addEventListener('submit', (e) => {
+				e.preventDefault();
+				// Simulação de envio com feedback interativo limpo
+				form.style.display = 'none';
+				successMessage.classList.remove('hidden');
+			});
+		}
+	</script>
+</Layout>

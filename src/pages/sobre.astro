@@ -1,0 +1,217 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { getPath } from '../utils/paths';
+---
+
+<Layout title="Sobre Nós & Liderança | E3M Solutions">
+	<Header />
+	
+	<main class="flex-grow pt-24 pb-20 overflow-hidden">
+		<!-- Hero Section -->
+		<section class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-16 md:pt-20 md:pb-24">
+			<div class="absolute -top-10 left-1/2 -translate-x-1/2 w-3/4 max-w-3xl h-96 bg-gradient-to-tr from-accent-cyan/15 to-accent-violet/15 blur-3xl pointer-events-none -z-10 rounded-full"></div>
+
+			<div class="text-center max-w-3xl mx-auto">
+				<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-panel text-sm font-medium text-slate-300 mb-6 border border-white/10">
+					<span class="w-2 h-2 rounded-full bg-accent-cyan animate-pulse"></span>
+					Nossa História, Propósito e Liderança
+				</div>
+
+				<h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-6 leading-tight text-white">
+					Engenharia de Software com Propósito, Maturidade e <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-cyan via-blue-400 to-accent-violet">Foco no Seu Negócio</span>
+				</h1>
+
+				<p class="text-lg md:text-xl text-slate-300 leading-relaxed">
+					A E3M Solutions é uma consultoria estruturada que constrói soluções robustas, integra inteligência artificial e acelera resultados sem modismos e sem desperdício.
+				</p>
+			</div>
+		</section>
+
+		<!-- Quem Somos -->
+		<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+			<div class="glass-panel p-8 md:p-12 rounded-3xl border border-white/15">
+				<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+					<div class="lg:col-span-7">
+						<span class="text-xs uppercase tracking-widest text-accent-cyan font-bold block mb-2">Quem Somos</span>
+						<h2 class="text-2xl md:text-3xl font-bold text-white mb-6">
+							Uma parceira de engenharia que resolve problemas de ponta a ponta
+						</h2>
+						<p class="text-slate-300 text-base leading-relaxed mb-4">
+							Não somos apenas uma fábrica de software tradicional. A <strong>E3M Solutions</strong> é a parceira técnica que líderes e empresas procuram quando precisam de soluções digitais de alto impacto: de sistemas SaaS e portais complexos a agentes autônomos de IA, integrações corporativas e modernização em nuvem.
+						</p>
+						<p class="text-slate-300 text-base leading-relaxed">
+							Nosso compromisso é entregar a solução completa: desenhamos a arquitetura, implementamos o código com padrões rigorosos de qualidade, sustentamos em produção e — fundamentalmente — <strong>treinamos e capacitamos os times dos nossos clientes</strong> para garantir soberania e independência tecnológica.
+						</p>
+					</div>
+
+					<div class="lg:col-span-5 grid grid-cols-2 gap-4">
+						<div class="glass-card p-5 rounded-2xl text-center">
+							<div class="text-3xl font-extrabold text-accent-cyan mb-1">+30 Anos</div>
+							<div class="text-xs text-slate-400 font-medium">Liderança & Mercado (Desde 1996)</div>
+						</div>
+						<div class="glass-card p-5 rounded-2xl text-center">
+							<div class="text-3xl font-extrabold text-accent-violet mb-1">Zero Lock-in</div>
+							<div class="text-xs text-slate-400 font-medium">Capacitação & Repasse Total</div>
+						</div>
+						<div class="glass-card p-5 rounded-2xl text-center">
+							<div class="text-3xl font-extrabold text-white mb-1">Pragmatismo</div>
+							<div class="text-xs text-slate-400 font-medium">Sem Overengineering</div>
+						</div>
+						<div class="glass-card p-5 rounded-2xl text-center">
+							<div class="text-3xl font-extrabold text-emerald-400 mb-1">AI-Native</div>
+							<div class="text-xs text-slate-400 font-medium">Fluxos & Agentes Modernos</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Manifesto de Engenharia E3M -->
+		<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+			<div class="text-center max-w-3xl mx-auto mb-16">
+				<h2 class="text-xs md:text-sm uppercase tracking-widest text-accent-cyan font-bold mb-3">Nosso Manifesto</h2>
+				<p class="text-3xl md:text-4xl font-bold text-white">
+					Como enxergamos a tecnologia e a parceria com nossos clientes
+				</p>
+			</div>
+
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+				<!-- Card 1 -->
+				<div class="glass-card p-8 flex flex-col">
+					<div class="w-12 h-12 rounded-xl bg-accent-cyan/10 border border-accent-cyan/30 flex items-center justify-center text-accent-cyan mb-5">
+						<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+					</div>
+					<h3 class="text-xl font-bold text-white mb-3">1. O Objetivo é Sempre do Cliente</h3>
+					<p class="text-slate-300 text-sm leading-relaxed">
+						Nossa missão é habilitar as <strong>suas metas</strong>: ROI, lucratividade, velocidade de lançamento, redução de custos, performance, visibilidade ou satisfação do usuário final. Tecnologia é meio, não fim. Não empurramos ferramentas para inflar ego técnico; recomendamos o que gera impacto direto na sua linha de chegada.
+					</p>
+				</div>
+
+				<!-- Card 2 -->
+				<div class="glass-card p-8 flex flex-col">
+					<div class="w-12 h-12 rounded-xl bg-accent-violet/10 border border-accent-violet/30 flex items-center justify-center text-accent-violet mb-5">
+						<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+					</div>
+					<h3 class="text-xl font-bold text-white mb-3">2. Combate Ativo ao Overengineering & Custos Inúteis</h3>
+					<p class="text-slate-300 text-sm leading-relaxed">
+						Evitamos gostos pessoais, "stacks de estimação" ou modismos passageiros. Buscamos arquiteturas simples, escaláveis e de fácil sustentação. Aplicamos princípios rígidos de FinOps, DevOps e IAOps para que cada centavo investido em infraestrutura e licenças se justifique economicamente.
+					</p>
+				</div>
+
+				<!-- Card 3 -->
+				<div class="glass-card p-8 flex flex-col">
+					<div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-5">
+						<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+					</div>
+					<h3 class="text-xl font-bold text-white mb-3">3. Valor Justo e Compatível com o Retorno</h3>
+					<p class="text-slate-300 text-sm leading-relaxed">
+						Acreditamos em relações comerciais saudáveis e sustentáveis. Nossos honorários são proporcionais à complexidade e ao retorno que entregamos para o negócio. Trabalhamos com clareza de escopo, previsibilidade de entregas e foco absoluto em relações de longo prazo baseadas em confiança mútua.
+					</p>
+				</div>
+
+				<!-- Card 4 -->
+				<div class="glass-card p-8 flex flex-col">
+					<div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 mb-5">
+						<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+					</div>
+					<h3 class="text-xl font-bold text-white mb-3">4. Capacitação, Treinamento & Repasse Total</h3>
+					<p class="text-slate-300 text-sm leading-relaxed">
+						Não criamos caixas-pretas para prender o contratante. Treinamos os usuários, capacitamos os desenvolvedores internos e entregamos documentação viva e automações completas. O cliente deve permanecer conosco pela qualidade contínua da nossa entrega, nunca por dependência técnica forçada.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Liderança Márcio Figueiredo -->
+		<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+			<div class="glass-panel p-8 md:p-14 rounded-3xl border border-white/15 relative overflow-hidden">
+				<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+					<!-- Coluna Visual / Avatar -->
+					<div class="lg:col-span-4 flex flex-col items-center text-center">
+						<div class="relative mb-6 group">
+							<div class="w-48 h-48 rounded-2xl bg-gradient-to-tr from-accent-cyan to-accent-violet p-1 shadow-2xl shadow-accent-cyan/20">
+								<div class="w-full h-full rounded-[14px] bg-midnight flex items-center justify-center overflow-hidden border border-white/10">
+									<!-- Ícone de Liderança Tecnológica em Estilo Glass -->
+									<div class="flex flex-col items-center justify-center p-4">
+										<div class="w-20 h-20 rounded-full bg-white/5 border border-white/10 flex items-center justify-center mb-3">
+											<svg class="w-10 h-10 text-accent-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+										</div>
+										<span class="text-sm font-bold text-white tracking-wide">Márcio Figueiredo</span>
+										<span class="text-xs text-accent-cyan">Fundador & CTO</span>
+									</div>
+								</div>
+							</div>
+							<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-accent-cyan/15 border border-accent-cyan/30 text-accent-cyan text-xs font-semibold mt-4">
+								<span>Desde 1996</span>
+								<span>&bull;</span>
+								<span>+30 anos de mercado</span>
+							</div>
+						</div>
+						
+						<a 
+							href="https://linkedin.com/in/marciofigueiredo" 
+							target="_blank" 
+							rel="noopener noreferrer"
+							class="glass-panel px-6 py-2.5 text-sm font-semibold text-white hover:bg-white/10 transition-colors rounded-xl flex items-center gap-2 border border-white/15"
+						>
+							<svg class="w-4 h-4 text-accent-cyan" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+							Conectar no LinkedIn
+						</a>
+					</div>
+
+					<!-- Coluna Bio e Autoridade -->
+					<div class="lg:col-span-8">
+						<span class="text-xs uppercase tracking-widest text-accent-violet font-bold block mb-2">Liderança Técnica</span>
+						<h2 class="text-3xl font-extrabold text-white mb-6">
+							Márcio Figueiredo
+						</h2>
+						<p class="text-slate-300 text-base leading-relaxed mb-4">
+							Com atuação ininterrupta na vanguarda da computação desde 1996, Márcio Figueiredo acumula mais de três décadas de experiência na concepção, liderança técnica e entrega de projetos críticos em múltiplos segmentos: sistemas de missão crítica, telecomunicações, radiodifusão, automação de processos e plataformas corporativas em nuvem.
+						</p>
+						<p class="text-slate-300 text-base leading-relaxed mb-6">
+							Hoje, lidera a E3M Solutions combinando essa bagagem consolidada de arquitetura com o que há de mais inovador no paradigma agêntico de Inteligência Artificial, desenvolvimento guiado por especificações (SDD) e liderança prática de squads de alta produtividade.
+						</p>
+
+						<div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-4 border-t border-white/10">
+							<div>
+								<div class="text-xs text-slate-400">Especialidade Principal</div>
+								<div class="text-sm font-semibold text-white">Arquitetura de Software & Nuvem</div>
+							</div>
+							<div>
+								<div class="text-xs text-slate-400">Inovação Aplicada</div>
+								<div class="text-sm font-semibold text-accent-cyan">IA Agêntica & Automações</div>
+							</div>
+							<div>
+								<div class="text-xs text-slate-400">Princípio Guia</div>
+								<div class="text-sm font-semibold text-accent-violet">Pragmatismo & Retorno do Cliente</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Banner de Conversão Final -->
+		<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+			<div class="glass-panel p-8 md:p-12 rounded-3xl border border-white/15 text-center">
+				<h2 class="text-2xl md:text-4xl font-bold text-white mb-4">
+					Pronto para ter um parceiro experiente ao seu lado?
+				</h2>
+				<p class="text-slate-300 text-base md:text-lg mb-8 max-w-2xl mx-auto">
+					Agende uma conversa estratégica gratuita para analisar seus gargalos técnicos, alinhar arquitetura ou integrar Inteligência Artificial ao seu negócio.
+				</p>
+				<a 
+					href={getPath('/contato')} 
+					class="inline-flex items-center gap-2 px-8 py-4 font-semibold text-white bg-gradient-to-r from-accent-cyan to-accent-violet rounded-xl shadow-lg shadow-accent-cyan/20 hover:opacity-95 transition-all"
+				>
+					Agendar Diagnóstico Gratuito
+					<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+				</a>
+			</div>
+		</section>
+	</main>
+
+	<Footer />
+</Layout>

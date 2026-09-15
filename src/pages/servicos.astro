@@ -1,0 +1,296 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { getPath } from '../utils/paths';
+---
+
+<Layout title="Serviços & Soluções | E3M Solutions">
+	<Header />
+	
+	<main class="flex-grow pt-24 pb-20 overflow-hidden">
+		<!-- Hero Section -->
+		<section class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-16 md:pt-20 md:pb-24">
+			<div class="absolute -top-10 left-1/2 -translate-x-1/2 w-3/4 max-w-3xl h-96 bg-gradient-to-tr from-accent-cyan/15 to-accent-violet/15 blur-3xl pointer-events-none -z-10 rounded-full"></div>
+
+			<div class="text-center max-w-3xl mx-auto">
+				<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-panel text-sm font-medium text-slate-300 mb-6 border border-white/10">
+					<span class="w-2 h-2 rounded-full bg-accent-cyan animate-pulse"></span>
+					Portfólio de Soluções & Engenharia
+				</div>
+
+				<h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-6 leading-tight text-white">
+					Serviços e Soluções Tecnológicas <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-cyan via-blue-400 to-accent-violet">Sob Medida</span>
+				</h1>
+
+				<p class="text-lg md:text-xl text-slate-300 leading-relaxed">
+					Da concepção de arquiteturas complexas à operacionalização com agentes de IA, cobrimos todo o ciclo de vida tecnológico da sua empresa com maturidade e pragmatismo.
+				</p>
+			</div>
+		</section>
+
+		<!-- 5 Verticais de Atuação -->
+		<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+			<div class="space-y-8">
+				
+				<!-- Vertical 1: Inteligência Artificial & Ecossistemas Agênticos -->
+				<div class="glass-panel p-8 md:p-12 rounded-3xl border border-white/15 relative overflow-hidden group">
+					<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+						<div class="lg:col-span-8">
+							<div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-accent-cyan/15 border border-accent-cyan/30 text-accent-cyan text-xs font-semibold uppercase tracking-wider mb-4">
+								Vertical 01 &bull; Inteligência Artificial
+							</div>
+							<h2 class="text-2xl md:text-3xl font-bold text-white mb-4">
+								IA, Desenvolvimento Agêntico & Automação Inteligente
+							</h2>
+							<p class="text-slate-300 text-base leading-relaxed mb-6">
+								Construímos ecossistemas com agentes autônomos de IA que executam tarefas complexas, orquestram workflows e conectam-se às ferramentas corporativas da sua empresa. Implementamos pipelines avançados de RAG (Retrieval-Augmented Generation), fine-tuning e camadas inteligentes que extraem valor real de dados legados sem custos descontrolados de inferência.
+							</p>
+							<div class="flex flex-wrap gap-2">
+								<span class="text-xs bg-white/5 border border-white/10 text-slate-300 px-3 py-1 rounded-full">Times Agênticos</span>
+								<span class="text-xs bg-white/5 border border-white/10 text-slate-300 px-3 py-1 rounded-full">RAG Corporativo</span>
+								<span class="text-xs bg-white/5 border border-white/10 text-slate-300 px-3 py-1 rounded-full">Workflows Autônomos</span>
+								<span class="text-xs bg-white/5 border border-white/10 text-slate-300 px-3 py-1 rounded-full">IAOps & FinOps de LLM</span>
+							</div>
+						</div>
+
+						<div class="lg:col-span-4 glass-card p-6 rounded-2xl flex flex-col justify-between">
+							<div>
+								<span class="text-xs uppercase tracking-widest text-slate-400 font-bold block mb-2">Impacto Direto</span>
+								<h3 class="text-lg font-bold text-accent-cyan mb-2">Produtividade Multiplicada</h3>
+								<p class="text-xs text-slate-400 leading-relaxed mb-6">
+									Transforme processos lentos e manuais em fluxos autônomos executados por agentes inteligentes com observabilidade total.
+								</p>
+							</div>
+							<a href={getPath('/contato')} class="text-sm font-semibold text-white flex items-center gap-1 hover:text-accent-cyan transition-colors">
+								Fale sobre o seu caso &rarr;
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- Vertical 2: Mentoria Técnica & CTO as a Service -->
+				<div class="glass-panel p-8 md:p-12 rounded-3xl border border-white/15 relative overflow-hidden group">
+					<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+						<div class="lg:col-span-8">
+							<div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-accent-violet/15 border border-accent-violet/30 text-accent-violet text-xs font-semibold uppercase tracking-wider mb-4">
+								Vertical 02 &bull; Liderança & Capacitação
+							</div>
+							<h2 class="text-2xl md:text-3xl font-bold text-white mb-4">
+								Mentoria Técnica, Liderança de Times & CTO as a Service
+							</h2>
+							<p class="text-slate-300 text-base leading-relaxed mb-6">
+								Atuamos diretamente ao lado do seu time interno para elevar o nível técnico da equipe. Implementamos metodologias modernas como Spec-Driven Development (SDD), desenvolvimento aumentado por agentes, engenharia de prompts e boas práticas de arquitetura. Atuamos como liderança técnica fracionária para negócios que necessitam de direcionamento de alta maturidade sem o custo fixo de um executivo integral.
+							</p>
+							<div class="flex flex-wrap gap-2">
+								<span class="text-xs bg-white/5 border border-white/10 text-slate-300 px-3 py-1 rounded-full">Liderança Técnica Fracionária</span>
+								<span class="text-xs bg-white/5 border border-white/10 text-slate-300 px-3 py-1 rounded-full">Upskilling de Desenvolvedores</span>
+								<span class="text-xs bg-white/5 border border-white/10 text-slate-300 px-3 py-1 rounded-full">Spec-Driven Development (SDD)</span>
+								<span class="text-xs bg-white/5 border border-white/10 text-slate-300 px-3 py-1 rounded-full">Pair Programming com IA</span>
+							</div>
+						</div>
+
+						<div class="lg:col-span-4 glass-card p-6 rounded-2xl flex flex-col justify-between">
+							<div>
+								<span class="text-xs uppercase tracking-widest text-slate-400 font-bold block mb-2">Impacto Direto</span>
+								<h3 class="text-lg font-bold text-accent-violet mb-2">Autonomia dos Seus Devs</h3>
+								<p class="text-xs text-slate-400 leading-relaxed mb-6">
+									Desenvolva as capacidades do seu time existente em vez de depender eternamente de consultorias externas.
+								</p>
+							</div>
+							<a href={getPath('/contato')} class="text-sm font-semibold text-white flex items-center gap-1 hover:text-accent-violet transition-colors">
+								Agendar mentoria técnica &rarr;
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- Vertical 3: Atendimento Inteligente & Omnichannel -->
+				<div class="glass-panel p-8 md:p-12 rounded-3xl border border-white/15 relative overflow-hidden group">
+					<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+						<div class="lg:col-span-8">
+							<div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 text-xs font-semibold uppercase tracking-wider mb-4">
+								Vertical 03 &bull; Atendimento & Automação
+							</div>
+							<h2 class="text-2xl md:text-3xl font-bold text-white mb-4">
+								Chatbots, WhatsApp Corporativo & Omnichannel com IA
+							</h2>
+							<p class="text-slate-300 text-base leading-relaxed mb-6">
+								Criamos assistentes conversacionais inteligentes e conectados que atendem via WhatsApp, webchat e portais corporativos. Nossos agentes entendem o contexto do cliente, consultam estoque, emitem boletos, agendam consultas e resolvem chamados complexos, realizando o transbordo para atendentes humanos apenas quando estritamente necessário.
+							</p>
+							<div class="flex flex-wrap gap-2">
+								<span class="text-xs bg-white/5 border border-white/10 text-slate-300 px-3 py-1 rounded-full">WhatsApp API Oficial</span>
+								<span class="text-xs bg-white/5 border border-white/10 text-slate-300 px-3 py-1 rounded-full">Integração ERP / CRM</span>
+								<span class="text-xs bg-white/5 border border-white/10 text-slate-300 px-3 py-1 rounded-full">Transbordo Humano Fluido</span>
+								<span class="text-xs bg-white/5 border border-white/10 text-slate-300 px-3 py-1 rounded-full">Atendimento 24/7 Contextual</span>
+							</div>
+						</div>
+
+						<div class="lg:col-span-4 glass-card p-6 rounded-2xl flex flex-col justify-between">
+							<div>
+								<span class="text-xs uppercase tracking-widest text-slate-400 font-bold block mb-2">Impacto Direto</span>
+								<h3 class="text-lg font-bold text-emerald-400 mb-2">Escala no Atendimento</h3>
+								<p class="text-xs text-slate-400 leading-relaxed mb-6">
+									Multiplique a capacidade de resposta da sua empresa com respostas instantâneas, humanas e precisas.
+								</p>
+							</div>
+							<a href={getPath('/contato')} class="text-sm font-semibold text-white flex items-center gap-1 hover:text-emerald-400 transition-colors">
+								Automatizar atendimento &rarr;
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- Vertical 4: Desenvolvimento Customizado, Cloud & Parcerias em Licitações -->
+				<div class="glass-panel p-8 md:p-12 rounded-3xl border border-white/15 relative overflow-hidden group">
+					<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+						<div class="lg:col-span-8">
+							<div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-blue-500/15 border border-blue-500/30 text-blue-400 text-xs font-semibold uppercase tracking-wider mb-4">
+								Vertical 04 &bull; Engenharia & Parcerias
+							</div>
+							<h2 class="text-2xl md:text-3xl font-bold text-white mb-4">
+								SaaS, Nuvem Moderna, Portais & Parcerias em Licitações
+							</h2>
+							<p class="text-slate-300 text-base leading-relaxed mb-6">
+								Construímos soluções completas: SaaS, micro-SaaS, plataformas web, arquiteturas serverless, dashboards analíticos e portais de autoatendimento. Além disso, atuamos como <strong>parceiro operacional em Licitações Públicas e Editais</strong>: você conquista a oportunidade contratual e nós entramos como o motor tecnológico de entrega, governança e sustentação do projeto.
+							</p>
+							<div class="flex flex-wrap gap-2">
+								<span class="text-xs bg-white/5 border border-white/10 text-slate-300 px-3 py-1 rounded-full">SaaS & Micro-SaaS</span>
+								<span class="text-xs bg-white/5 border border-white/10 text-slate-300 px-3 py-1 rounded-full">Parceria em Licitações</span>
+								<span class="text-xs bg-white/5 border border-white/10 text-slate-300 px-3 py-1 rounded-full">Arquitetura Cloud GCP / AWS</span>
+								<span class="text-xs bg-white/5 border border-white/10 text-slate-300 px-3 py-1 rounded-full">Sistemas de Missão Crítica</span>
+							</div>
+						</div>
+
+						<div class="lg:col-span-4 glass-card p-6 rounded-2xl flex flex-col justify-between">
+							<div>
+								<span class="text-xs uppercase tracking-widest text-slate-400 font-bold block mb-2">Impacto Direto</span>
+								<h3 class="text-lg font-bold text-blue-400 mb-2">Execução Garantida</h3>
+								<p class="text-xs text-slate-400 leading-relaxed mb-6">
+									Segurança técnica para fechar e entregar grandes contratos com solidez e conformidade técnica.
+								</p>
+							</div>
+							<a href={getPath('/contato')} class="text-sm font-semibold text-white flex items-center gap-1 hover:text-blue-400 transition-colors">
+								Discutir parceria &rarr;
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- Vertical 5: Staff Augmentation com Gestão e Liderança Técnica Integrada -->
+				<div class="glass-panel p-8 md:p-12 rounded-3xl border border-white/15 relative overflow-hidden group">
+					<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+						<div class="lg:col-span-8">
+							<div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-amber-500/15 border border-amber-500/30 text-amber-400 text-xs font-semibold uppercase tracking-wider mb-4">
+								Vertical 05 &bull; Alocação com Liderança
+							</div>
+							<h2 class="text-2xl md:text-3xl font-bold text-white mb-4">
+								Staff Augmentation com Gestão e Liderança Técnica Integrada
+							</h2>
+							<p class="text-slate-300 text-base leading-relaxed mb-6">
+								Alocamos profissionais de tecnologia selecionados (desenvolvedores frontend/backend, QAs, engenheiros de dados e IA, POs e scrum masters) com um diferencial crucial: <strong>nossa liderança técnica acompanha de perto o profissional</strong>. Não entregamos currículos sem suporte; fornecemos mentoria, code reviews e acompanhamento contínuo para garantir entregas com padrão de excelência.
+							</p>
+							<div class="flex flex-wrap gap-2">
+								<span class="text-xs bg-white/5 border border-white/10 text-slate-300 px-3 py-1 rounded-full">Devs & QAs Selecionados</span>
+								<span class="text-xs bg-white/5 border border-white/10 text-slate-300 px-3 py-1 rounded-full">Acompanhamento Técnico E3M</span>
+								<span class="text-xs bg-white/5 border border-white/10 text-slate-300 px-3 py-1 rounded-full">Garantia de Entrega</span>
+								<span class="text-xs bg-white/5 border border-white/10 text-slate-300 px-3 py-1 rounded-full">Flexibilidade & Velocidade</span>
+							</div>
+						</div>
+
+						<div class="lg:col-span-4 glass-card p-6 rounded-2xl flex flex-col justify-between">
+							<div>
+								<span class="text-xs uppercase tracking-widest text-slate-400 font-bold block mb-2">Impacto Direto</span>
+								<h3 class="text-lg font-bold text-amber-400 mb-2">Zero Carga de Microgestão</h3>
+								<p class="text-xs text-slate-400 leading-relaxed mb-6">
+									Tenha profissionais engajados e tecnicamente suportados pela experiência de quem tem mais de 30 anos no mercado.
+								</p>
+							</div>
+							<a href={getPath('/contato')} class="text-sm font-semibold text-white flex items-center gap-1 hover:text-amber-400 transition-colors">
+								Montar sua squad &rarr;
+							</a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+		<!-- Como Trabalhamos (Metodologia em 4 Passos) -->
+		<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+			<div class="text-center max-w-3xl mx-auto mb-16">
+				<h2 class="text-xs md:text-sm uppercase tracking-widest text-accent-cyan font-bold mb-3">Nossa Metodologia</h2>
+				<p class="text-3xl md:text-4xl font-bold text-white">
+					Como transformamos o seu desafio em valor real
+				</p>
+			</div>
+
+			<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+				<!-- Passo 1 -->
+				<div class="glass-card p-6 rounded-2xl relative">
+					<div class="w-10 h-10 rounded-full bg-accent-cyan/15 border border-accent-cyan/30 text-accent-cyan flex items-center justify-center font-bold text-sm mb-4">
+						01
+					</div>
+					<h3 class="text-lg font-bold text-white mb-2">Diagnóstico Estratégico</h3>
+					<p class="text-slate-400 text-xs leading-relaxed">
+						Mapeamos detalhadamente seus objetivos de negócio, a arquitetura existente e os gargalos reais antes de sugerir qualquer linha de código.
+					</p>
+				</div>
+
+				<!-- Passo 2 -->
+				<div class="glass-card p-6 rounded-2xl relative">
+					<div class="w-10 h-10 rounded-full bg-accent-violet/15 border border-accent-violet/30 text-accent-violet flex items-center justify-center font-bold text-sm mb-4">
+						02
+					</div>
+					<h3 class="text-lg font-bold text-white mb-2">Desenho Pragmático</h3>
+					<p class="text-slate-400 text-xs leading-relaxed">
+						Arquitetura enxuta, sem excesso de ferramentas ou custos ocultos. Proposta justa, orientada a retorno financeiro e viabilidade rápida.
+					</p>
+				</div>
+
+				<!-- Passo 3 -->
+				<div class="glass-card p-6 rounded-2xl relative">
+					<div class="w-10 h-10 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 flex items-center justify-center font-bold text-sm mb-4">
+						03
+					</div>
+					<h3 class="text-lg font-bold text-white mb-2">Construção & Liderança</h3>
+					<p class="text-slate-400 text-xs leading-relaxed">
+						Execução ágil guiada por especificações, padrões de qualidade rigorosos, observabilidade e integração com Inteligência Artificial.
+					</p>
+				</div>
+
+				<!-- Passo 4 -->
+				<div class="glass-card p-6 rounded-2xl relative">
+					<div class="w-10 h-10 rounded-full bg-blue-500/15 border border-blue-500/30 text-blue-400 flex items-center justify-center font-bold text-sm mb-4">
+						04
+					</div>
+					<h3 class="text-lg font-bold text-white mb-2">Handover & Capacitação</h3>
+					<p class="text-slate-400 text-xs leading-relaxed">
+						Entrega com documentação clara, código comentado, treinamento do seu time e sustentação para garantir autonomia total.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Banner de Conversão Final -->
+		<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+			<div class="glass-panel p-8 md:p-12 rounded-3xl border border-white/15 text-center">
+				<h2 class="text-2xl md:text-4xl font-bold text-white mb-4">
+					Tem um projeto em mente ou precisa de apoio técnico?
+				</h2>
+				<p class="text-slate-300 text-base md:text-lg mb-8 max-w-2xl mx-auto">
+					Conte com a E3M Solutions para estruturar, acelerar ou sustentar sua tecnologia com excelência técnica.
+				</p>
+				<a 
+					href={getPath('/contato')} 
+					class="inline-flex items-center gap-2 px-8 py-4 font-semibold text-white bg-gradient-to-r from-accent-cyan to-accent-violet rounded-xl shadow-lg shadow-accent-cyan/20 hover:opacity-95 transition-all"
+				>
+					Agende uma Conversa Estratégica
+					<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+				</a>
+			</div>
+		</section>
+	</main>
+
+	<Footer />
+</Layout>
