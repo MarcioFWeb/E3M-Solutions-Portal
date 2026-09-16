@@ -6,7 +6,7 @@ A análise do ecossistema existente revelou dois pilares complementares que deve
 
 ### 1.1. E3M Solutions (`e3m.dev.br` - Legado Hashnode)
 * **Posicionamento & Proposta de Valor:** Soluções em Nuvem, Desenvolvimento, Inteligência Artificial, Consultoria, Arquitetura, Squads, Recrutamento Tech e Upskilling.
-* **Histórico e Autoridade:** Empresa atuando há 25+ anos no mercado sob liderança de Márcio Figueiredo (27+ anos de experiência na área de engenharia de software e liderança tech na Globo).
+* **Histórico e Autoridade:** Empresa atuando há 25+ anos no mercado sob liderança de Marcio Figueiredo (27+ anos de experiência na área de engenharia de software e liderança tech na Globo).
 * **Cultura Operacional:** Estrutura digital, enxuta e descentralizada ("Seu projeto, seus objetivos, suas regras; foco no problema e resultados práticos sem amarras burocráticas").
 * **Acervo Atual de Cases Reais:**
   1. *Afiliadas de Emissoras:* Solicitações de Materiais e Comunicação (App Web & Mobile).
@@ -21,7 +21,7 @@ A análise do ecossistema existente revelou dois pilares complementares que deve
   - IA e automações para pequenas empresas e startups.
   - Agilidade aplicada a projetos de escopo, prazo e orçamento rígidos.
 
-### 1.2. Márcio Figueiredo (`marcio.dev.br` - BLIP)
+### 1.2. Marcio Figueiredo (`marcio.dev.br` - BLIP)
 * **Conceito:** *Build and Learn in Public (BLIP)*.
 * **Foco:** Compartilhamento de aprendizados, spikes de código, trilhas para certificação, vagas curadas de TI e mentoria de carreira tech.
 
@@ -40,7 +40,7 @@ graph TD
     Home["/ (Landing Page Institucional & Hub de Conteúdo)"]
     BlogIndex["/blog (Feed Completo com Filtros por Categoria/Tag)"]
     BlogPost["/blog/[slug] (Artigo, Case ou Estudo em MDX)"]
-    Sobre["/sobre (História E3M, Valores, Márcio Figueiredo)"]
+    Sobre["/sobre (História E3M, Valores, Marcio Figueiredo)"]
     Servicos["/servicos (Catálogo de Soluções: Nuvem, IA, Squads, etc.)"]
     Cases["/cases (Visão dedicada dos Cases de Sucesso)"]
     Contato["/contato (Call to Action, Diagnóstico Gratuito, Canais)"]
@@ -79,7 +79,7 @@ Para unificar artigos de opinião, cases, spikes de IA, dicas de certificação 
 title: "Título do Post"
 description: "Resumo de até 160 caracteres otimizado para SEO e cards."
 date: 2026-09-10
-author: "Márcio Figueiredo"
+author: "Marcio Figueiredo"
 type: "case" # case | service | article | experiment | saas | track | opinion | recommendation
 tags: ["Nuvem", "GCP", "Serverless"]
 coverImage: "./assets/post-cover.webp"

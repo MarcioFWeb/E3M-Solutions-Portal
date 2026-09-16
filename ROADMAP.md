@@ -45,7 +45,7 @@ Cada item deve ser implementado via uma **SPEC temporária** em `docs/SPECS/`, e
   - Seção de Artigos Recentes consumindo diretamente os 3 últimos posts da Content Collection.
   - Banners institucionais de conversão: "Tem um desafio crítico?", "Agende um Diagnóstico Estratégico".
 - [x] **SPEC-006: Páginas Institucionais**
-  - `/sobre`: História da E3M, Manifesto de Engenharia (anti-overengineering, foco no cliente, capacitação total), liderança sênior de Márcio Figueiredo (+30 anos desde 1996) e link LinkedIn.
+  - `/sobre`: História da E3M, Manifesto de Engenharia (anti-overengineering, foco no cliente, capacitação total), liderança sênior de Marcio Figueiredo (+30 anos desde 1996) e link LinkedIn.
   - `/servicos`: 5 verticais detalhadas (IA & Agentes, Mentoria & CTO as a Service, Atendimento Inteligente & WhatsApp, Dev Customizado/Cloud/Licitações, Staff Augmentation com Gestão Integrada) e metodologia "Como Trabalhamos".
   - `/contato`: Canais diretos (WhatsApp e E-mail), destaque do Diagnóstico Gratuito (30 min) e formulário interativo de contato.
   - `/privacidade` e `/termos`: Páginas completas de compliance sob a legislação brasileira (LGPD, confidencialidade, NDA e termos de serviços de TI).

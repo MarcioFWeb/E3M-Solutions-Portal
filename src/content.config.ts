@@ -9,7 +9,7 @@ const blog = defineCollection({
     description: z.string().max(200),
     pubDate: z.coerce.date(),
     updatedDate: z.coerce.date().optional(),
-    author: z.string().default('Márcio Figueiredo'),
+    author: z.string().default('Marcio Figueiredo'),
     type: z.enum([
       'case',
       'article',
