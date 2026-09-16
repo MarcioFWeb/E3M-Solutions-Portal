@@ -245,14 +245,11 @@ import { getPath } from '../utils/paths';
 						<div class="relative mb-6 group">
 							<div class="w-48 h-48 rounded-2xl bg-gradient-to-tr from-accent-cyan to-accent-violet p-1 shadow-2xl shadow-accent-cyan/20">
 								<div class="w-full h-full rounded-[14px] bg-midnight flex items-center justify-center overflow-hidden border border-white/10">
-									<!-- Ícone de Liderança Tecnológica em Estilo Glass -->
-									<div class="flex flex-col items-center justify-center p-4">
-										<div class="w-20 h-20 rounded-full bg-white/5 border border-white/10 flex items-center justify-center mb-3">
-											<svg class="w-10 h-10 text-accent-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
-										</div>
-										<span class="text-sm font-bold text-white tracking-wide">Marcio Figueiredo</span>
-										<span class="text-xs text-accent-cyan">Fundador & CTO</span>
-									</div>
+									<img 
+										src={getPath('/images/MARCIO_PERFIL.jpg')} 
+										alt="Marcio Figueiredo" 
+										class="w-full h-full object-cover"
+									/>
 								</div>
 							</div>
 							<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-accent-cyan/15 border border-accent-cyan/30 text-accent-cyan text-xs font-semibold mt-4">
@@ -263,7 +260,7 @@ import { getPath } from '../utils/paths';
 						</div>
 						
 						<a 
-							href="https://linkedin.com/in/marciofigueiredo" 
+							href="https://www.linkedin.com/in/marciofigueiredoweb" 
 							target="_blank" 
 							rel="noopener noreferrer"
 							class="glass-panel px-6 py-2.5 text-sm font-semibold text-white hover:bg-white/10 transition-colors rounded-xl flex items-center gap-2 border border-white/15 w-full justify-center"
