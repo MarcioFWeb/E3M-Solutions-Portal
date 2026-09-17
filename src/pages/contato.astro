@@ -244,13 +244,54 @@ import Footer from '../components/Footer.astro';
 	<script>
 		const form = document.getElementById('contact-form') as HTMLFormElement;
 		const successMessage = document.getElementById('form-success');
+		const submitBtn = form?.querySelector('button[type="submit"]') as HTMLButtonElement;
 
-		if (form && successMessage) {
-			form.addEventListener('submit', (e) => {
+		if (form && successMessage && submitBtn) {
+			form.addEventListener('submit', async (e) => {
 				e.preventDefault();
-				// Simulação de envio com feedback interativo limpo
-				form.style.display = 'none';
-				successMessage.classList.remove('hidden');
+				
+				const originalText = submitBtn.innerHTML;
+				submitBtn.disabled = true;
+				submitBtn.innerHTML = '<span class="animate-pulse">Enviando mensagem...</span>';
+				submitBtn.classList.add('opacity-70', 'cursor-not-allowed');
+
+				try {
+					const formData = new FormData(form);
+					const data = Object.fromEntries(formData.entries());
+					
+					// Ajusta checkbox
+					const payload = {
+						name: data.name,
+						email: data.email,
+						phone: data.phone,
+						company: data.company,
+						service: data.service,
+						message: data.message,
+						requestDiagnostic: data['request-diagnostic'] === 'on'
+					};
+					
+					const response = await fetch('https://us-central1-e3m-portal-tec.cloudfunctions.net/sendContactEmail', {
+						method: 'POST',
+						headers: {
+							'Content-Type': 'application/json'
+						},
+						body: JSON.stringify(payload)
+					});
+
+					if (!response.ok) {
+						throw new Error('Falha ao enviar e-mail');
+					}
+
+					form.style.display = 'none';
+					successMessage.classList.remove('hidden');
+				} catch (error) {
+					console.error('Erro no envio:', error);
+					alert('Desculpe, ocorreu um erro ao enviar sua mensagem. Por favor, utilize os canais diretos (E-mail/WhatsApp).');
+				} finally {
+					submitBtn.disabled = false;
+					submitBtn.innerHTML = originalText;
+					submitBtn.classList.remove('opacity-70', 'cursor-not-allowed');
+				}
 			});
 		}
 	</script>
