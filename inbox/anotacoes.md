@@ -11,3 +11,6 @@ Gostaria de entrar em um modo interativo e explorativo, onde vamos extessar as o
 	- https://www.linkedin.com/in/marciofigueiredoweb/
 	- https://github.com/MarcioFWeb
 	- https://gitlab.com/marciofwebglobo
+	- https://www.youtube.com/@marciofweb
+	- https://x.com/ai_mf_e3msol
+	- https://www.linkedin.com/company/e3m-br/posts
