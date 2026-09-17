@@ -8,7 +8,7 @@ type BlogPost = {
     description: string;
     pubDate: Date;
     author: string;
-    type: 'case' | 'article' | 'service' | 'experiment' | 'saas' | 'track' | 'opinion' | 'recommendation';
+    type: 'case' | 'artigo' | 'video';
     tags: string[];
   };
 };
@@ -18,25 +18,15 @@ interface BlogFeedProps {
 }
 
 const typeColors: Record<string, string> = {
+  artigo: 'bg-purple-500/20 text-purple-300 border-purple-500/30',
+  video: 'bg-rose-500/20 text-rose-300 border-rose-500/30',
   case: 'bg-blue-500/20 text-blue-300 border-blue-500/30',
-  article: 'bg-purple-500/20 text-purple-300 border-purple-500/30',
-  opinion: 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30',
-  service: 'bg-amber-500/20 text-amber-300 border-amber-500/30',
-  experiment: 'bg-rose-500/20 text-rose-300 border-rose-500/30',
-  saas: 'bg-cyan-500/20 text-cyan-300 border-cyan-500/30',
-  track: 'bg-indigo-500/20 text-indigo-300 border-indigo-500/30',
-  recommendation: 'bg-teal-500/20 text-teal-300 border-teal-500/30',
 };
 
 const typeLabels: Record<string, string> = {
+  artigo: 'Artigo',
+  video: 'Vídeo',
   case: 'Case',
-  article: 'Artigo',
-  opinion: 'Opinião',
-  service: 'Serviço',
-  experiment: 'Experimento',
-  saas: 'SaaS',
-  track: 'Trilha',
-  recommendation: 'Recomendação',
 };
 
 export default function BlogFeed({ posts }: BlogFeedProps) {
