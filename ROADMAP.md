@@ -65,6 +65,9 @@ Cada item deve ser implementado via uma **SPEC temporária** em `docs/SPECS/`, e
   - `functions/` (Node 22, `firebase-functions`, `firebase-admin`, `resend`, `cors`) integrado ao formulário de `/contato`; config em `firebase.json` + `.firebaserc`.
 - [x] **Social/Footer**
   - Links GitHub `marciofweb`, LinkedIn empresa, X e YouTube `@marciofweb`; remoção do LinkedIn pessoal do rodapé; foto de perfil.
-- [ ] **SPEC-007: Automação Agêntica e Otimização de Performance**
+- [ ] **SPEC-007: Automação Agêntica e Otimização de Performance** (restante — SEO fatiado para `SPEC-009`)
   - Scripts de otimização de imagens (`sharp`) e geração de drafts MDX pelo Agent Harness.
-  - Otimização para 100 no Lighthouse (Core Web Vitals, OpenGraph, sitemap.xml, RSS feed).
+  - Otimização para 100 no Lighthouse (Core Web Vitals).
+- [ ] **SPEC-009: SEO Mínimo para `e3m.dev.br`** — registrada em `docs/SPECS/009-seo-minimo.md`, **aguardando ordem de execução**
+  - Head SEO em `Layout.astro` (`canonical`, `og:*`, `twitter:*`) + `og-default.png`.
+  - Sitemap (`@astrojs/sitemap`), RSS (`/rss.xml`) e `robots.txt`.
