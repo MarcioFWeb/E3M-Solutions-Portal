@@ -68,6 +68,7 @@ Cada item deve ser implementado via uma **SPEC temporária** em `docs/SPECS/`, e
 - [ ] **SPEC-007: Automação Agêntica e Otimização de Performance** (restante — SEO fatiado para `SPEC-009`)
   - Scripts de otimização de imagens (`sharp`) e geração de drafts MDX pelo Agent Harness.
   - Otimização para 100 no Lighthouse (Core Web Vitals).
-- [ ] **SPEC-009: SEO Mínimo para `e3m.dev.br`** — registrada em `docs/SPECS/009-seo-minimo.md`, **aguardando ordem de execução**
-  - Head SEO em `Layout.astro` (`canonical`, `og:*`, `twitter:*`) + `og-default.png`.
-  - Sitemap (`@astrojs/sitemap`), RSS (`/rss.xml`) e `robots.txt`.
+- [x] **SPEC-009: SEO Mínimo para `e3m.dev.br`** (concluída — SPEC temporária arquivada via commit)
+  - Head SEO em `Layout.astro` (`canonical`, `og:*`, `twitter:*` absolutas) + `type="article"` no reader `blog/[id]`.
+  - `public/images/og-default.png` (1200×630, placeholder via `sharp`, substituível pela arte final sem mudar código).
+  - Sitemap (`@astrojs/sitemap`), RSS (`/rss.xml` via `@astrojs/rss`, 17 posts) e `public/robots.txt`.

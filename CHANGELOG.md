@@ -25,5 +25,5 @@ O formato baseia-se em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0
 - Integração do formulário de `/contato` com Firebase Functions (Node 22) e Resend (`functions/`, `firebase.json`).
 - Links sociais no rodapé: GitHub `marciofweb`, LinkedIn da empresa, X e YouTube `@marciofweb`; remoção do LinkedIn pessoal do fundador; foto de perfil.
 - Domínio próprio `e3m.dev.br`: `public/CNAME` e `site: 'https://e3m.dev.br'` em `astro.config.mjs`; deploy mantido via GitHub Pages (Node 22).
-- SPEC-009 registrada (`docs/SPECS/009-seo-minimo.md`, referenciada no ROADMAP Ciclo 3): SEO mínimo para `e3m.dev.br` — Head OG/Twitter/canonical em `Layout.astro`, `og-default.png`, sitemap, RSS `/rss.xml` e `robots.txt`. Aguardando ordem de execução; `SPEC-007` restante apenas para `sharp`/automação agêntica e Lighthouse.
+- SPEC-009 concluída (SPEC temporária arquivada): SEO mínimo para `e3m.dev.br` — Head OG/Twitter/canonical absolutas em `Layout.astro` + `type="article"` no reader `blog/[id]`, `public/images/og-default.png` (1200×630 via `sharp`), sitemap (`@astrojs/sitemap`), RSS `/rss.xml` (`@astrojs/rss`, 17 posts, categoria = `type`) e `public/robots.txt`. `SPEC-007` restante apenas para `sharp`/automação agêntica e Lighthouse.
 
