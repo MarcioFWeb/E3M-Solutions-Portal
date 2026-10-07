@@ -246,6 +246,21 @@ import Footer from '../components/Footer.astro';
 		const successMessage = document.getElementById('form-success');
 		const submitBtn = form?.querySelector('button[type="submit"]') as HTMLButtonElement;
 
+		// Pré-preenchimento via ?service= & ?message= (ex.: calculadora de alocação)
+		try {
+			const params = new URLSearchParams(window.location.search);
+			const svc = params.get('service');
+			const msg = params.get('message');
+			if (svc) {
+				const sel = document.getElementById('service') as HTMLSelectElement | null;
+				if (sel && [...sel.options].some((o) => o.value === svc)) sel.value = svc;
+			}
+			if (msg) {
+				const ta = document.getElementById('message') as HTMLTextAreaElement | null;
+				if (ta && !ta.value) ta.value = msg;
+			}
+		} catch { /* ignora */ }
+
 		if (form && successMessage && submitBtn) {
 			form.addEventListener('submit', async (e) => {
 				e.preventDefault();
