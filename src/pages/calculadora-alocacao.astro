@@ -10,7 +10,7 @@ const PERFIS = [
 	{ id: 'qa', nome: 'QA / testes', taxas: { jr: 90, pleno: 115, sr: 140 } },
 	{ id: 'ux', nome: 'UX / produto', taxas: { jr: 95, pleno: 120, sr: 145 } },
 	{ id: 'ia', nome: 'IA / dados / automação', taxas: { jr: 130, pleno: 160, sr: 190 } },
-	{ id: 'lead', nome: 'Tech Lead as a Service', taxas: { jr: 180, pleno: 220, sr: 260 } },
+	{ id: 'lead', nome: 'Tech Lead as a Service (sênior)', taxas: { sr: 210 } },
 ];
 ---
 
@@ -77,6 +77,16 @@ const PERFIS = [
 		const fmt = (v) => v.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL', maximumFractionDigits: 0 });
 		const taxaDe = (pid, sen) => perfis.find((p) => p.id === pid).taxas[sen];
 		const nomeDe = (pid) => perfis.find((p) => p.id === pid).nome;
+
+		function ajustarSenioridade() {
+			const sel = $('f-senior');
+			if ($('f-perfil').value === 'lead') {
+				sel.innerHTML = '<option value="sr" selected>Sênior — R$ 210/h referência</option>';
+			} else if (sel.options.length < 3) {
+				sel.innerHTML = '<option value="jr">Júnior</option><option value="pleno" selected>Pleno</option><option value="sr">Sênior</option>';
+			}
+		}
+		$('f-perfil').addEventListener('change', ajustarSenioridade);
 
 		function mensal(taxa, horasMes, qtd) { return Math.round(taxa * horasMes * qtd / 100) * 100; }
 
