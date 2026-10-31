@@ -25,3 +25,14 @@ pnpm-debug.log*
 
 # visual studio code
 .vscode/
+
+# Firebase local cache & logs
+.firebase/
+firebase-debug.log*
+functions/firebase-debug.log*
+functions/lib/newsletter/
+
+# Workspace local harnesses & skills
+.agents/
+
+

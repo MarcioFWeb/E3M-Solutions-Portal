@@ -2,6 +2,7 @@
   "name": "functions",
   "scripts": {
     "build": "tsc",
+    "test": "vitest run src/",
     "build:watch": "tsc --watch",
     "serve": "npm run build && firebase emulators:start --only functions",
     "shell": "npm run build && firebase functions:shell",
@@ -21,8 +22,9 @@
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",
-    "@types/node": "^18.19.130",
-    "typescript": "^7.0.2"
+    "@types/node": "^26.6.6",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.5"
   },
   "private": true
 }
