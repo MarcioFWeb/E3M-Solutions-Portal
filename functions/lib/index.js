@@ -36,7 +36,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.sendContactEmail = void 0;
+exports.subscribeNewsletter = exports.sendContactEmail = void 0;
 const https_1 = require("firebase-functions/v2/https");
 const logger = __importStar(require("firebase-functions/logger"));
 const params_1 = require("firebase-functions/params");
@@ -91,4 +91,7 @@ exports.sendContactEmail = (0, https_1.onRequest)({ secrets: [resendApiKey] }, (
         }
     });
 });
+// Cloud Function v2 for B2B Newsletter subscription & Diagnostic Lead Capture
+var subscribeHandler_1 = require("./newsletter/subscribeHandler");
+Object.defineProperty(exports, "subscribeNewsletter", { enumerable: true, get: function () { return subscribeHandler_1.subscribeNewsletter; } });
 //# sourceMappingURL=index.js.map
