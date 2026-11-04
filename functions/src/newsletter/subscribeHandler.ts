@@ -167,9 +167,9 @@ export async function handleNewsletterSubscription(
     }
   }
 
-  // 5. Resend Audience Sync
+  // 5. Resend Audience Sync (only if configured and valid)
   let resendContactId: string | undefined;
-  if (deps.resend && deps.audienceId) {
+  if (deps.resend && deps.audienceId && deps.audienceId !== 'none' && deps.audienceId.trim().length > 5) {
     try {
       const names = (payload.name || '').trim().split(' ');
       const firstName = names[0] || undefined;
