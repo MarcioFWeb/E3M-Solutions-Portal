@@ -186,7 +186,7 @@ export const NewsletterForm: React.FC<NewsletterFormProps> = ({
 
             <div>
               <label className="block text-xs font-medium text-slate-300 mb-1">
-                Solicitar Relatório Técnico (Isca Digital Opcional)
+                Diagnóstico Técnico Especializado (Opcional)
               </label>
               <select
                 value={leadMagnetId}
