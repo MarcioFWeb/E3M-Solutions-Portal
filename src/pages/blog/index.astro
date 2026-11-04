@@ -3,6 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import BlogFeed from '../../components/BlogFeed';
+import NewsletterForm from '../../components/NewsletterForm';
 import { getCollection } from 'astro:content';
 
 const allPosts = await getCollection('blog');
@@ -27,6 +28,11 @@ const blogPosts = allPosts
 			</div>
 
 			<BlogFeed posts={blogPosts} client:load />
+
+			<!-- Newsletter & B2B Diagnostics Box -->
+			<div class="mt-20">
+				<NewsletterForm client:visible />
+			</div>
 		</div>
 	</main>
 
