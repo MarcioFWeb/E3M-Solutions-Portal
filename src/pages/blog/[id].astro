@@ -3,6 +3,7 @@ import { getCollection, render } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
+import NewsletterForm from '../../components/NewsletterForm';
 import { getPath } from '../../utils/paths';
 
 export async function getStaticPaths() {
@@ -91,6 +92,11 @@ const typeLabels: Record<string, string> = {
 					))}
 				</div>
 			)}
+
+			<!-- Newsletter & B2B Diagnostic Capture Form -->
+			<div class="mt-16">
+				<NewsletterForm client:visible />
+			</div>
 
 			<div class="mt-16 text-center border-t border-white/10 pt-10">
 				{post.data.type === 'case' ? (
