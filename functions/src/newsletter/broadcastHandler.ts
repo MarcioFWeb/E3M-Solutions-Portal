@@ -349,12 +349,29 @@ export const sendNewsletterBroadcast = onRequest(
         let decodedToken: admin.auth.DecodedIdToken;
 
         try {
-          decodedToken = await admin.auth().verifyIdToken(idToken);
-        } catch (authErr) {
+          // Multi-project token verification: verify against e3m-content-machine (PWA tenant) or fallback to default project
+          let cmApp = admin.apps.find((a) => a?.name === 'content-machine-auth');
+          if (!cmApp) {
+            cmApp = admin.initializeApp(
+              { projectId: 'e3m-content-machine' },
+              'content-machine-auth'
+            );
+          }
+
+          try {
+            decodedToken = await cmApp.auth().verifyIdToken(idToken);
+          } catch (cmErr: any) {
+            if (cmErr?.code === 'auth/argument-error' && cmErr?.message?.includes('aud')) {
+              decodedToken = await admin.auth().verifyIdToken(idToken);
+            } else {
+              throw cmErr;
+            }
+          }
+        } catch (authErr: any) {
           logger.warn('Invalid auth token in sendNewsletterBroadcast', authErr);
           response.status(401).json({
             success: false,
-            message: 'Unauthorized. Invalid or expired authentication token.',
+            message: `Unauthorized: ${authErr?.message || 'Invalid or expired authentication token.'}`,
             mode: 'test',
           });
           return;
