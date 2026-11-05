@@ -36,11 +36,35 @@ export interface SubscriberRecord {
   resendContactId?: string;
 }
 
+export type BroadcastMode = 'test' | 'live';
+
+export interface SendBroadcastRequest {
+  title: string;                 // Internal name / edition title (e.g. "Edição 04: Modernizando Legados")
+  subject: string;               // Email subject line
+  htmlContent: string;           // Full formatted HTML content
+  mode: BroadcastMode;           // 'test' | 'live'
+  testRecipient?: string;        // Required when mode === 'test'
+  ideaId?: string;               // Optional link to source idea document
+  scheduledAt?: string;          // Optional ISO string for future scheduling
+}
+
+export interface SendBroadcastResponse {
+  success: boolean;
+  message: string;
+  mode: BroadcastMode;
+  broadcastId?: string;
+  testEmailId?: string;
+  recipient?: string;
+}
+
 export interface AuditEvent {
-  action: 'newsletter_subscription' | 'diagnostic_lead_capture';
-  emailHashSha256: string;
+  action: 'newsletter_subscription' | 'diagnostic_lead_capture' | 'newsletter_broadcast_sent' | 'newsletter_test_sent';
+  emailHashSha256?: string;
   timestampUtc: string;
   ipHash: string;
   userAgent?: string;
   leadMagnetId?: string;
+  actorUid?: string;
+  actorEmail?: string;
+  broadcastId?: string;
 }

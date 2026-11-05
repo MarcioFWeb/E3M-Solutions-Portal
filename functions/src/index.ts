@@ -67,3 +67,7 @@ export const sendContactEmail = onRequest(
 // Cloud Function v2 for B2B Newsletter subscription & Diagnostic Lead Capture
 export { subscribeNewsletter } from "./newsletter/subscribeHandler";
 
+// Cloud Function v2 for Newsletter Broadcast & Author Preview Testing (Resend)
+export { sendNewsletterBroadcast } from "./newsletter/broadcastHandler";
+
+
