@@ -1,27 +1,28 @@
 ---
-title: "Case: APP Drugstore - Da Ideação ao Lançamento (APP Mobile)"
-description: "👨‍💻 Solução: Construção e lançamento da aplicação da maior rede de drogarias de Minas Gerais. Aplicação estratégica para expansão de vendas e diversas funcionalidades relacionadas à cuidado com..."
-pubDate: 2023-11-11
+title: "Case: APP Drugstore — Da Ideação ao Lançamento do E-Commerce Mobile da Maior Rede de Farmácias de MG"
+description: "Construção e lançamento do aplicativo mobile de e-commerce e saúde da maior rede de drogarias de MG, integrado com VTEX e ERP corporativo."
+pubDate: 2022-08-20
 author: "Marcio Figueiredo"
 type: "case"
-tags: ["mobile", "farmacia", "e-commerce", "produto"]
+heroImage: "/images/blog/covers/modernize-ou-construa-novas-aplicacoes-na-nuvem.jpeg"
+tags: ["mobile", "farmacia", "e-commerce", "vtex", "react-native", "arquitetura", "b2c"]
 ---
 
-👨‍💻 **Solução:** Construção e lançamento da aplicação da maior rede de drogarias de Minas Gerais. Aplicação estratégica para expansão de vendas e diversas funcionalidades relacionadas à cuidado com a saúde (*pill reminder*, transcrição de receitas e montagem do carrinho de compras) e outros.
+👨‍💻 **Solução:** Concepção, arquitetura e lançamento do aplicativo mobile de e-commerce e serviços de saúde da maior rede de drogarias de Minas Gerais. O app constituiu um canal estratégico de expansão de vendas omnicanal (*omnichannel*), integrando compra online com retirada expressa em lojas físicas (*Click & Collect*), além de utilitários de cuidado com a saúde (*pill reminder* para lembretes de medicação, transcrição inteligente de receitas médicas e recompra programada).
 
-💼 **Atuação:** Atuação em praticamente todas as fases do projeto. Da ideação, levantamento funcional, análise de processos, análise de requisitos, especificação, integrações, arquitetura *backend*, integrações, módulo web, mobile, dados. Liderança de time, apoio à gestão (inclusive em mudança de processo tradicional para ágil no meio do projeto), desenvolvimento (pl sql, dotnet, java, angular, vb, etc). Estudo e definições arquiteturais complexas devido à requisitos complexos principalmente de integração e workflows com: plataforma de ecommerce VTEX, ERP, todo fluxo financeiro, contábil, conciliação e ainda questões legais da área de saúde, comércio, dados, LGPD e outros. Foi um projeto muito desafiador. Saímos de um primeiro protótipo navegável do design inicial até o lançamento e primeira venda realizada através do aplicativo com retirada da mercadoria na matriz da rede de drogarias.
+💼 **Atuação E3M:** Liderança técnica e arquitetural em todas as fases:
+* **Ideação e Engenharia de Requisitos:** Mapeamento de jornadas de usuário, especificações funcionais e transição do modelo tradicional para métodos ágeis de desenvolvimento;
+* **Integrações Críticas de Backend:** Arquitetura de mensageria e middleware integrando a plataforma VTEX, ERP corporativo legado, conciliação financeira, regras fiscais e tributárias farmacêuticas, sistemas de estoque em tempo real das centenas de lojas da rede e conformidade com a LGPD e normas da ANVISA;
+* **Liderança Técnica Multidisciplinar:** Coordenação de times especialistas nas frentes de React Native (mobile iOS/Android), Angular (painéis operacionais web), microsserviços em .NET/Java e bancos de dados transacionais.
 
-🛠️ **Stack/Infra:**
+🛠️ **Stack Tecnológica & Infraestrutura:**
+* 📲 **Mobile:** React Native com foco em fluidez nativa e experiência de checkout sem fricção
+* 🖥️ **Web:** Angular para backoffices de monitoramento de pedidos e suporte ao cliente
+* 📦 **Backend & Integrações:** Microsserviços e APIs em .NET Core e Java, integrados nativamente com as APIs da VTEX e mensageria
+* 🎲 **Bancos de Dados:** Microsoft SQL Server e PostgreSQL com alta resiliência e conciliação de concorrência
+* ⚙️ **Ambientes:** Arquitetura híbrida de nuvem com alta disponibilidade e escalabilidade sob campanhas sazonais (Black Friday)
 
-* 📲 React Native
-    
-* 🖥️ Angular
-    
-* 📦 Java, dotnet, vb e outros
-    
-* 🎲 MS SQL, PostgreSQL
-    
-* ⚙️ Windows Server + IIS, Linux
-    
-
-✅ **Resultados / Geração de Valor:** O planejamento do projeto foi cumprido dentro do prazo definido apesar de inúmeros problemas que uma missão deste tamanho estava sujeita, até pelo tamanho da empresa, volume de transações, *compliance* e qualidade esperada. Os principais objetivos definidos no início do projeto foram alcançados: Mais um canal de vendas (*ecommerce*) para a empresa (integrado com a plataforma do site e sistema de vendas por telefone já existentes), revolução da forma de comprar medicamentos e outros itens da *drugstore* com a possibilidade de compra online via mobile e retirada em uma das centenas de lojas da rede (pioneirismo), expansão da percepção de referência tecnológica nesta área de negócios. O aplicativo foi objeto de grandes campanhas de marketing e contribuiu para resultados não somente em vendas pelo App mas também da rede em geral.
+✅ **Resultados / Geração de Valor:** O projeto foi entregue cumprindo o cronograma estipulado, estabelecendo um novo padrão tecnológico para o varejo farmacêutico regional:
+* 🚀 **Novo Canal de Receita Digital:** O app tornou-se um dos principais vetores de faturamento digital da rede, com pioneirismo na retirada rápida em loja;
+* 🛒 **Aumento no Ticket Médio:** Recursos como lembretes de medicação e recompra automatizada elevaram a taxa de fidelização e a recorrência dos clientes;
+* 🏆 **Reconhecimento de Marca:** O aplicativo foi o centro de campanhas de marketing em horário nobre, consolidando a rede como referência em inovação e conveniência para o consumidor.

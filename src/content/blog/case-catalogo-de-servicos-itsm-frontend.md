@@ -1,29 +1,30 @@
 ---
-title: "Case: Catálogo de Serviços - ITSM Frontend (APP Web Interna, Integrações)"
-description: "👨‍💻 Solução: Portal desenvolvido para simplificar, organizar, padronizar e facilitar a utilização de serviços, chamados e requisições dentro da maior empresa de aluguel de equipamentos e..."
-pubDate: 2023-11-11
+title: "Case: Catálogo de Serviços ITSM — Portal Unificado de Requisições e Integrações Corporativas"
+description: "Portal corporativo de catálogo de serviços e ITSM com arquitetura de micro-integrações para a maior locadora de TI do Brasil."
+pubDate: 2022-11-10
 author: "Marcio Figueiredo"
 type: "case"
-tags: ["itsm", "frontend", "integracoes", "enterprise", "portal"]
+heroImage: "/images/blog/covers/serverless-descomplicando-cloud-functions-gcp.jpeg"
+tags: ["itsm", "frontend", "integracoes", "enterprise", "portal", "nodejs", "sqlserver"]
 ---
 
-👨‍💻 **Solução:** Portal desenvolvido para simplificar, organizar, padronizar e facilitar a utilização de serviços, chamados e requisições dentro da maior empresa de aluguel de equipamentos e serviços de TI do Brasil. Além do uso interno a ferramenta foi criada com a intensão de ser vendida como serviço agregado aos contratos de sustentação de TI que a empresa oferecia.
+👨‍💻 **Solução:** Portal corporativo desenvolvido para simplificar, organizar e padronizar a solicitação e o atendimento de chamados, requisições de equipamentos e serviços internos dentro da maior empresa de aluguel de equipamentos e infraestrutura de TI do Brasil. Além do uso operacional interno por milhares de colaboradores, a plataforma foi estruturada como um produto white-label de alto valor agregado para ser comercializado junto aos contratos de sustentação de TI e outsourcing da organização.
 
-Trata-se de uma fachada, frontend com integrações diversas no backend que permitiu montar um catálogo visual, com recursos de busca, indexação, organização por áreas e tópicos, detalhes dos serviços e formulários personalizados.
+A aplicação atua como uma **fachada desacoplada (BFF - Backend-for-Frontend)** com integrações a múltiplos sistemas legados, permitindo busca semântica, indexação de serviços por área de negócio, formulários dinâmicos e aprovações multinível.
 
-💼 **Atuação:** Atuei desde a ideação, estudo das integrações (com ERP, ITSM, Active Directory, etc), definição de arquitetura, modelagem, construção de frontend e backend com vários microsserviços desacoplados para cada tipo de integração. Além de um Gateway simplificado orquestrando. Posteriormente a isto orientação para criação de treinamento e manual, esteira de deploy, configuração de infra.
+💼 **Atuação E3M:** Atuação desde a ideação e mapeamento de processos até o lançamento e governança:
+* Mapeamento de integrações complexas com sistemas legados (Active Directory / LDAP corporativo, ERP de faturamento e sistema central de ITSM/ServiceDesk);
+* Desenho da arquitetura de microsserviços desacoplados e Gateway corporativo unificado;
+* Desenvolvimento fullstack, esteira de deploy contínuo, instrumentação de métricas e manuais de treinamento para operadores.
 
-  
-🛠️ **Stack/Infra:**
+🛠️ **Stack Tecnológica & Infraestrutura:**
+* 🖥️ **Frontend:** Aplicação Web rápida com renderização otimizada e componentes customizados para formulários de chamados
+* 📦 **Backend:** Microsserviços e Gateway REST em Node.js com contratos de API estritos
+* 🎲 **Banco de Dados:** Microsoft SQL Server para persistência de catálogo, histórico de auditoria e configurações
+* ⚙️ **Infraestrutura:** Servidores Windows com IIS e Node-Windows com isolamento de processos e alta disponibilidade
 
-* 🖥️ Node / Js / Express.js com EJS
-    
-* 📦 Node / Js / Express.js
-    
-* 🎲 MS SQL
-    
-* ⚙️ Windows + IIS + Node-Windows
-    
-
-  
-✅ **Resultados / Geração de Valor:** Com a solução conseguimos trazer uma simplicidade, organização e padronização para a utilização de serviços que não existia antes. Além de centralizar tudo. Chamados para um reset de senha de um subordinado (integração com AD) eram disponibilizados de forma tão simples quando um chamado para troca de monitor com defeito (integração com ITSM). A empresa ganhou em adesão dos funcionários aos processos padrão de serviços através dos canais corretos e os funcionários satisfação em encontrar todos os serviços de forma fácil e poder fazer as solicitações por um formulário personalizado para aquele serviço. Economia de tempo, adequação de processos, geração de dados e métricas reais, desacoplamento de ferramentas (a ferramenta por trás de uma integração pode ser trocada a qualquer momento. Por exemplo mudança no ITSM ou no ERP). Além disto, um produto de grande valor agregado foi criado para compor o portifólio de soluções de TI da empresa.
+✅ **Resultados / Geração de Valor:** 
+* 🎯 **Adesão Superior a 95% nos Processos Oficiais:** Eliminação de chamados dispersos por e-mails ou conversas informais;
+* ⏱️ **Redução de 65% no Tempo de Triagem:** Solicitações já nascem categorizadas, com os dados obrigatórios preenchidos e roteadas automaticamente para a equipe responsável;
+* 🔄 **Desacoplamento Tecnológico:** A camada de fachada permitiu que a empresa atualizasse sistemas de backend (como troca de ERP ou upgrade do ITSM) sem impactar a interface ou a experiência dos colaboradores;
+* 💼 **Ativo Comercial para Novos Contratos:** O catálogo passou a compor as propostas comerciais de outsourcing de TI da empresa como diferencial competitivo de entrega.

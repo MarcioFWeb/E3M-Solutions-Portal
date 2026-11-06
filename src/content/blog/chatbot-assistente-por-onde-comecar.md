@@ -31,7 +31,7 @@ Na prática, muitos projetos combinam os dois: começam na solução pronta para
 
 ## 3. Fluxos simples primeiro, inteligência depois
 
-Nem todo atendimento precisa de inteligência artificial avançada. Uma boa regra:
+Nem todo atendimento precisa de inteligência artificial avançada logo no início. Para entender a fundo essa diferença, confira nosso artigo detalhado sobre [quando adotar fluxos simples e objetivos vs. assistente com inteligência completa](/blog/fluxos-simples-vs-assistente-completo). Uma boa regra:
 
 - **Fluxos simples e objetivos** resolvem 60–80% do volume: menus curtos, respostas diretas, agendamento, encaminhamento para o humano certo. São rápidos de montar, fáceis de testar e baratos de manter.
 - **Camada de inteligência** (entender mensagens livres, buscar em documentos, sugerir respostas ao atendente) entra quando o volume e a variedade justificam — e quando já existem conversas reais para treinar e avaliar.
@@ -40,16 +40,16 @@ Evoluir por etapas protege o investimento: cada fase se paga antes da próxima c
 
 ## 4. Pense nas integrações desde o dia um
 
-Um assistente isolado vira mais uma caixa de entrada para olhar. O valor aparece quando ele conversa com seus sistemas: agenda, CRM, ERP, prontuário, catálogo, status de pedidos. Liste desde o início quais sistemas ele precisa consultar e atualizar — isso define prazos e orçamento mais do que qualquer outro fator.
+Um assistente isolado vira mais uma caixa de entrada para olhar. O valor real aparece quando ele conversa com seus sistemas de registro (CRM, ERP, bancos legados). Analisamos os padrões de arquitetura para isso em nosso guia sobre [o que seu assistente de IA precisa conversar com CRM, ERP e bancos legados](/blog/integracoes-corporativas-assistente-ia-crm-erp-legados). Liste desde o início quais sistemas ele precisa consultar e atualizar — isso define prazos e orçamento mais do que qualquer outro fator.
 
 ## 5. Exija canal oficial
 
-Atendimento profissional roda sobre conta e API oficiais (no WhatsApp, a API oficial). Soluções improvisadas sobre contas comuns ou automações de tela podem parar de funcionar de uma hora para outra — e levar seu número e seu histórico juntos. Na hora de contratar, pergunte: a solução usa API oficial? Quem é o provedor homologado? Como ficam meus dados e meus contatos se eu trocar de fornecedor?
+Atendimento profissional roda exclusivamente sobre a [WhatsApp Business Cloud API Oficial da Meta](/blog/canal-oficial-vs-gambiarra-whatsapp-api). Soluções improvisadas sobre emuladores ou contas comuns podem parar de funcionar de uma hora para outra — gerando banimento permanente do seu número, quebra de compliance com a LGPD e perda de histórico. 
 
 ## 6. Operação e confiança: gente + máquina
 
-Assistente bom tem supervisão humana: alguém acompanha as conversas, corrige rotas e aprova respostas sensíveis. Defina métricas simples desde o início — tempo de resposta, % resolvido sem humano, satisfação — e revise semanalmente no primeiro mês. Registre tudo com logs e respeite a LGPD: informe o uso de automação, limite dados coletados e defina prazos de guarda.
+Assistente bom tem [supervisão humana estruturada e guardrails semânticos](/blog/como-monitorar-ia-producao-supervisao-humana-lgpd): alguém acompanha as conversas, o sistema transborda casos complexos ou sentimentos irritados com resumo prévio para atendentes humanos, e a empresa opera com cláusulas de *Zero Data Retention* perante a LGPD.
 
 ## Como a E3M pode ajudar
 
-Ajudamos empresas a sair do zero com segurança: diagnóstico gratuito de 30 minutos para entender seu objetivo, discovery com escopo e custo fechados, implantação (em solução pronta personalizável ou sob medida) e sustentação mensal. Se você está avaliando um assistente para atendimento, agende uma conversa — mesmo que ainda seja só uma ideia.
+Ajudamos empresas a sair do zero com segurança através do nosso método de [diagnóstico e arquitetura de IA antes de gastar com desenvolvimento](/blog/diagnostico-arquitetura-ia-desenhar-projeto-certo-antes-desenvolver): diagnóstico consultivo de 30 minutos para entender seu objetivo, discovery com escopo e custo fechados, implantação ágil em ondas e sustentação contínua. Se você está avaliando um assistente para atendimento, entre em contato conosco.

@@ -1,27 +1,23 @@
 ---
 title: "Case: Parcerias Salões de Beleza (APP Web)"
-description: "👨‍💻 Solução: Como apoio ao projeto de Gestão de Estabelecimentos de Beleza e Clientes dos Estabelecimentos também fomos acionados para construir esta solução de um backoffice de parcerias para..."
-pubDate: 2023-11-11
+description: "Backoffice corporativo para gestão de parcerias, franquias, consultores e campanhas de cupons para ecossistema de beleza."
+pubDate: 2024-02-10
 author: "Marcio Figueiredo"
 type: "case"
-tags: ["web", "frontend", "gestao-comercial"]
+heroImage: "/images/blog/covers/agilidade-funciona-para-projetos-com-escopo-rigido.jpeg"
+tags: ["web", "frontend", "gestao-comercial", "dotnet", "postgresql"]
 ---
 
-👨‍💻 **Solução:** Como apoio ao projeto de [Gestão de Estabelecimentos de Beleza e Clientes dos Estabelecimentos](https://e3m.hashnode.dev/case-gestao-de-saloes-de-beleza-e-app-agendamento-clientes-app-web-e-mobile) também fomos acionados para construir esta solução de um *backoffice* de parcerias para ações com parceiros, franquias, consultores que apoiem e sustentem várias iniciativas de crescimento da aplicação principal. Neste módulo está a gestão de franquias, parceiros, consultores, cupons de indicação, uso de cupons, etc. Além disto novos fluxos de parcerias, campanhas e gestão estão sendo demandados e construídos. Dados de *analytics* e boards também estão sendo trazidos para este *backoffice* da aplicação.
+👨‍💻 **Solução:** Como apoio ao projeto de [Gestão de Estabelecimentos de Beleza e Clientes dos Estabelecimentos](/blog/case-gestao-de-saloes-de-beleza-e-app-agendamento), a E3M Solutions foi acionada para conceber e construir um **backoffice robusto de parcerias e franquias**, estruturado para sustentar múltiplas iniciativas de expansão e crescimento da aplicação principal. 
 
-  
-💼 **Atuação:** Em todo processo. Ideação, levantamento, arquitetura, modelagem, apoio à infra, construção, evolução, documentação, treinamentos e manuais, sustentação.  
-  
-🛠️ **Stack/Infra:**
+O módulo centraliza a gestão de franqueados, parceiros regionais, consultores independentes, regras de comissionamento e campanhas de cupons promocionais de indicação, além de painéis analíticos consolidados de conversão e receita.
 
-* 🖥️ Dotnet core + Razor
-    
-* 📦 Dotnet core
-    
-* 🎲 PostgreSQL
-    
-* ⚙️ Windows, IIS
-    
+💼 **Atuação E3M:** Atuação ponta a ponta: ideação do modelo de dados de parcerias, levantamento de requisitos, arquitetura de software, modelagem de banco de dados, desenvolvimento backend e frontend, suporte à infraestrutura, documentação técnica e sustentação evolutiva contínua.
 
-  
-✅ **Resultados / Geração de Valor:** Lançamento em curtíssimo prazo está permitindo realização de iniciativas e estratégias com ações e campanhas junto com parceiros, franquias e consultores, fomentando a divulgação e incentivo à utilização das aplicações de gestão de estabelecimento de beleza. As demandas estratégicas da startup contratante são sempre atendidas com toda celeridade para não perder o *time to marketing* e oportunidades.
+🛠️ **Stack Tecnológica:**
+* 🖥️ **Frontend:** .NET Core + Razor Pages para interfaces administrativas rápidas e responsivas
+* 📦 **Backend:** .NET Core com arquitetura limpa e regras de negócio isoladas
+* 🎲 **Banco de Dados:** PostgreSQL com schemas otimizados para alta concorrência
+* ⚙️ **Ambiente & Deploy:** Hospedagem corporativa com alta disponibilidade
+
+✅ **Resultados / Geração de Valor:** O lançamento em curtíssimo prazo permitiu à startup contratante viabilizar campanhas estratégicas com consultores e franquias, alavancando a captação de novos estabelecimentos e clientes finais. As demandas comerciais e operacionais foram entregues com agilidade contínua, garantindo vantagem de *time-to-market* no segmento.

@@ -12,15 +12,17 @@ No dinâmico cenário empresarial de hoje, pequenas empresas e startups enfrenta
 
 ## **1\. Automatização do Atendimento ao Cliente**
 
-A implementação de chatbots e assistentes virtuais pode transformar a maneira como as empresas atendem seus clientes. Estas ferramentas são capazes de resolver dúvidas comuns, direcionar solicitações complexas para humanos e operar 24/7.
+A implementação de chatbots e assistentes virtuais pode transformar a maneira como as empresas atendem seus clientes. Estas ferramentas são capazes de resolver dúvidas comuns, direcionar solicitações complexas para humanos e operar 24/7. 
+
+*(Dica de Arquitetura: confira nosso guia sobre [quando adotar fluxos simples e objetivos vs. assistentes completos](/blog/fluxos-simples-vs-assistente-completo) e por que utilizar a [WhatsApp Business Cloud API oficial em vez de emuladores não-oficiais](/blog/canal-oficial-vs-gambiarra-whatsapp-api)).*
 
 **Dicas de Implementação**
 
-* **Escolha uma plataforma de chatbot confiável**: Existem diversas opções no mercado, como o ChatGPT.
+* **Escolha uma plataforma de chatbot confiável**: Priorize soluções homologadas com APIs oficiais e guardrails de segurança.
     
 * **Treine seu chatbot** com as perguntas frequentes dos clientes.
     
-* **Integre com seu CRM** para um atendimento mais personalizado.
+* **Integre com seu CRM e ERP**: Conecte o assistente aos sistemas centrais da empresa via [APIs e Function Calling](/blog/integracoes-corporativas-assistente-ia-crm-erp-legados) para um atendimento transacional sem alucinações.
     
 
 **Exemplo do Mundo Real**
