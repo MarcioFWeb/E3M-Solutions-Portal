@@ -70,4 +70,8 @@ export { subscribeNewsletter } from "./newsletter/subscribeHandler";
 // Cloud Function v2 for Newsletter Broadcast & Author Preview Testing (Resend)
 export { sendNewsletterBroadcast } from "./newsletter/broadcastHandler";
 
+// Cloud Function v2 for Lead Metrics & Telemetry Dashboard
+export { getLeadMetrics } from "./newsletter/metricsHandler";
+
+
 

@@ -36,7 +36,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.sendNewsletterBroadcast = exports.subscribeNewsletter = exports.sendContactEmail = void 0;
+exports.getLeadMetrics = exports.sendNewsletterBroadcast = exports.subscribeNewsletter = exports.sendContactEmail = void 0;
 const https_1 = require("firebase-functions/v2/https");
 const logger = __importStar(require("firebase-functions/logger"));
 const params_1 = require("firebase-functions/params");
@@ -97,4 +97,7 @@ Object.defineProperty(exports, "subscribeNewsletter", { enumerable: true, get: f
 // Cloud Function v2 for Newsletter Broadcast & Author Preview Testing (Resend)
 var broadcastHandler_1 = require("./newsletter/broadcastHandler");
 Object.defineProperty(exports, "sendNewsletterBroadcast", { enumerable: true, get: function () { return broadcastHandler_1.sendNewsletterBroadcast; } });
+// Cloud Function v2 for Lead Metrics & Telemetry Dashboard
+var metricsHandler_1 = require("./newsletter/metricsHandler");
+Object.defineProperty(exports, "getLeadMetrics", { enumerable: true, get: function () { return metricsHandler_1.getLeadMetrics; } });
 //# sourceMappingURL=index.js.map

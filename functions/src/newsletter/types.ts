@@ -68,3 +68,37 @@ export interface AuditEvent {
   actorEmail?: string;
   broadcastId?: string;
 }
+
+export interface LeadMetricsItem {
+  id: string;
+  email: string;
+  name?: string;
+  company?: string;
+  role?: string;
+  leadMagnetId?: string;
+  subscribedAtUtc: string;
+}
+
+export interface LeadMetricsSummaryData {
+  totalSubscribers: number;
+  totalDiagnosticsRequested: number;
+  newsletterOnlySubscribers: number;
+  diagnosticAttachmentRate: number; // e.g., 0.75 for 75%
+  diagnosticsBreakdown: Record<string, number>;
+}
+
+export interface RecentAuditEventItem {
+  action: string;
+  timestampUtc: string;
+  leadMagnetId?: string;
+  actorEmail?: string;
+}
+
+export interface GetLeadMetricsResponse {
+  success: boolean;
+  message?: string;
+  metrics: LeadMetricsSummaryData;
+  leads: LeadMetricsItem[];
+  recentEvents: RecentAuditEventItem[];
+}
+
