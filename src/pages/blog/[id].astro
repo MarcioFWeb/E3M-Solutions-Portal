@@ -4,6 +4,7 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import NewsletterForm from '../../components/NewsletterForm';
+import MermaidRenderer from '../../components/MermaidRenderer.astro';
 import { getPath } from '../../utils/paths';
 
 export async function getStaticPaths() {
@@ -115,4 +116,5 @@ const typeLabels: Record<string, string> = {
 	</main>
 
 	<Footer />
+	<MermaidRenderer />
 </Layout>

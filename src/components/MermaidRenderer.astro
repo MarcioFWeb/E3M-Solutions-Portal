@@ -1,0 +1,170 @@
+---
+// MermaidRenderer.astro - Renderizador dinâmico client-side para diagramas Mermaid e tabelas responsivas no Blog E3M
+---
+
+<script>
+  import mermaid from 'mermaid';
+
+  mermaid.initialize({
+    startOnLoad: false,
+    theme: 'base',
+    themeVariables: {
+      darkMode: true,
+      background: 'transparent',
+      mainBkg: '#0f172a',
+      textColor: '#f8fafc',
+      primaryColor: '#1e3a8a',
+      primaryTextColor: '#f8fafc',
+      primaryBorderColor: '#38bdf8',
+      lineColor: '#38bdf8',
+      secondaryColor: '#1e293b',
+      secondaryTextColor: '#f8fafc',
+      secondaryBorderColor: '#06b6d4',
+      tertiaryColor: '#0b0f19',
+      tertiaryTextColor: '#e2e8f0',
+      tertiaryBorderColor: '#334155',
+      // Sequence diagram specifics
+      actorBkg: '#1e293b',
+      actorBorder: '#38bdf8',
+      actorTextColor: '#ffffff',
+      actorLineColor: '#38bdf8',
+      signalColor: '#38bdf8',
+      signalTextColor: '#f8fafc',
+      labelBoxBkgColor: '#1e293b',
+      labelBoxBorderColor: '#38bdf8',
+      labelTextColor: '#f8fafc',
+      loopTextColor: '#f8fafc',
+      noteBkgColor: '#0f172a',
+      noteTextColor: '#93c5fd',
+      noteBorderColor: '#38bdf8',
+      activationBorderColor: '#38bdf8',
+      activationBkgColor: '#1e3a8a',
+      sequenceNumberColor: '#ffffff',
+      // Flowchart specifics
+      nodeBorder: '#38bdf8',
+      clusterBkg: '#0b0f19',
+      clusterBorder: '#334155',
+      defaultLinkColor: '#38bdf8',
+      titleColor: '#ffffff',
+      edgeLabelBackground: '#0f172a',
+    },
+    fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+    securityLevel: 'loose',
+  });
+
+  function decodeEntities(str: string): string {
+    const txt = document.createElement('textarea');
+    txt.innerHTML = str;
+    return txt.value;
+  }
+
+  async function renderMermaidDiagrams() {
+    const codeBlocks = document.querySelectorAll<HTMLElement>(
+      'pre[data-language="mermaid"], pre.language-mermaid'
+    );
+
+    for (let i = 0; i < codeBlocks.length; i++) {
+      const pre = codeBlocks[i];
+      if (pre.dataset.processed === 'true') continue;
+      pre.dataset.processed = 'true';
+
+      let rawCode = '';
+      const lines = pre.querySelectorAll('.line');
+      if (lines.length > 0) {
+        rawCode = Array.from(lines)
+          .map((l) => l.textContent || '')
+          .join('\n');
+      } else {
+        rawCode = pre.innerText || pre.textContent || '';
+      }
+
+      rawCode = decodeEntities(rawCode).trim();
+      if (!rawCode) continue;
+
+      const container = document.createElement('div');
+      container.className =
+        'mermaid-rendered-container my-8 p-6 rounded-2xl bg-slate-900/90 border border-cyan-500/30 backdrop-blur-md shadow-2xl flex justify-center items-center overflow-x-auto text-center';
+
+      const diagramId = `mermaid-diag-${i}-${Math.random().toString(36).substring(2, 7)}`;
+
+      try {
+        const { svg } = await mermaid.render(diagramId, rawCode);
+        container.innerHTML = svg;
+        const svgEl = container.querySelector('svg');
+        if (svgEl) {
+          svgEl.style.maxWidth = '100%';
+          svgEl.style.height = 'auto';
+        }
+        pre.parentNode?.replaceChild(container, pre);
+      } catch (err) {
+        console.error('Erro ao renderizar diagrama Mermaid:', err, rawCode);
+        pre.style.border = '1px solid #ef4444';
+      }
+    }
+  }
+
+  function enhanceTables() {
+    const tables = document.querySelectorAll<HTMLTableElement>('.prose table');
+    tables.forEach((table) => {
+      if (table.parentElement?.classList.contains('table-responsive-wrapper')) return;
+      const wrapper = document.createElement('div');
+      wrapper.className =
+        'table-responsive-wrapper my-8 overflow-x-auto rounded-xl border border-white/10 bg-slate-900/60 p-1 shadow-lg';
+      table.parentNode?.insertBefore(wrapper, table);
+      wrapper.appendChild(table);
+    });
+  }
+
+  function init() {
+    renderMermaidDiagrams();
+    enhanceTables();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+  document.addEventListener('astro:page-load', init);
+</script>
+
+<style is:global>
+  /* Styling para os diagramas Mermaid renderizados */
+  .mermaid-rendered-container {
+    transition: all 0.3s ease;
+  }
+  .mermaid-rendered-container:hover {
+    border-color: rgba(6, 182, 212, 0.5);
+    box-shadow: 0 20px 25px -5px rgba(6, 182, 212, 0.1), 0 8px 10px -6px rgba(6, 182, 212, 0.1);
+  }
+  .mermaid-rendered-container svg {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+  
+  /* Styling para tabelas markdown no blog */
+  .table-responsive-wrapper table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 !important;
+  }
+  .table-responsive-wrapper th {
+    background-color: rgba(30, 41, 59, 0.9) !important;
+    color: #38bdf8 !important;
+    font-weight: 700 !important;
+    padding: 0.85rem 1rem !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    text-align: left !important;
+  }
+  .table-responsive-wrapper td {
+    padding: 0.85rem 1rem !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    color: #cbd5e1 !important;
+  }
+  .table-responsive-wrapper tr:nth-child(even) td {
+    background-color: rgba(255, 255, 255, 0.03) !important;
+  }
+  .table-responsive-wrapper tr:hover td {
+    background-color: rgba(6, 182, 212, 0.05) !important;
+  }
+</style>
