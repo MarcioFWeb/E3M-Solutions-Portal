@@ -199,7 +199,25 @@ export const NewsletterForm: React.FC<NewsletterFormProps> = ({
                   </option>
                 ))}
               </select>
+
+              {leadMagnetId && (
+                <div className="mt-2.5 p-3 rounded-xl bg-cyan-950/40 border border-cyan-400/30 flex flex-col sm:flex-row items-center justify-between gap-2.5 text-xs">
+                  <div className="flex items-center gap-2 text-cyan-200">
+                    <span className="text-cyan-400 font-bold">⚡</span>
+                    <span>Deseja calcular seu Score e ROI quantitativo agora em ~90s?</span>
+                  </div>
+                  <a
+                    href="https://e3m-roai.web.app/#catalogo"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-cyan-400 hover:bg-cyan-300 text-slate-950 font-semibold text-xs transition-colors shrink-0"
+                  >
+                    Opere a calculadora viva no RO.AI →
+                  </a>
+                </div>
+              )}
             </div>
+
 
             <div className="pt-2">
               <label className="flex items-start space-x-2.5 cursor-pointer">
