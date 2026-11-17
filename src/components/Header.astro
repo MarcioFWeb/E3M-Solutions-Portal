@@ -1,28 +1,97 @@
 ---
 import { getPath } from '../utils/paths';
 ---
-<header class="fixed top-0 w-full z-50 bg-midnight/70 backdrop-blur-md border-b border-white/10">
+<header class="fixed top-0 w-full z-50 bg-midnight/80 dark:bg-midnight/80 light:bg-white/80 backdrop-blur-md border-b border-white/10 dark:border-white/10 light:border-slate-200">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center h-16">
       <div class="flex-shrink-0 flex items-center">
-        <a href={getPath('/')} class="flex items-center gap-2">
-            <svg class="w-8 h-8 text-accent-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
-            <span class="font-bold text-xl tracking-tight text-white">E3M Solutions</span>
+        <a href={getPath('/')} class="flex items-center gap-2 group">
+          <svg class="w-8 h-8 text-accent-cyan group-hover:scale-105 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+          <span class="font-bold text-xl tracking-tight text-white dark:text-white light:text-slate-900">E3M Solutions</span>
         </a>
       </div>
-      <nav class="hidden md:flex space-x-8">
-        <a href={getPath('/')} class="text-slate-300 hover:text-white transition-colors">Home</a>
-        <a href={getPath('/blog')} class="text-slate-300 hover:text-white transition-colors">Blog & Artigos</a>
-        <a href={getPath('/cases')} class="text-slate-300 hover:text-white transition-colors">Cases</a>
-        <a href={getPath('/servicos')} class="text-slate-300 hover:text-white transition-colors">Serviços</a>
-        <a href={getPath('/calculadora-alocacao')} class="text-slate-300 hover:text-white transition-colors">Calculadora</a>
-        <a href={getPath('/sobre')} class="text-slate-300 hover:text-white transition-colors">Sobre</a>
+      <nav class="hidden md:flex space-x-7 items-center">
+        <a href={getPath('/')} class="text-slate-300 hover:text-white transition-colors text-sm font-medium">Home</a>
+        <a href={getPath('/solucoes')} class="text-accent-cyan hover:text-cyan-300 transition-colors text-sm font-semibold flex items-center gap-1">
+          <span>Soluções</span>
+          <span class="text-[10px] bg-accent-cyan/20 border border-accent-cyan/30 text-accent-cyan px-1.5 py-0.2 rounded-full">Portfólio</span>
+        </a>
+        <a href={getPath('/blog')} class="text-slate-300 hover:text-white transition-colors text-sm font-medium">Blog</a>
+        <a href={getPath('/cases')} class="text-slate-300 hover:text-white transition-colors text-sm font-medium">Cases</a>
+        <a href={getPath('/servicos')} class="text-slate-300 hover:text-white transition-colors text-sm font-medium">Serviços</a>
+        <a href={getPath('/calculadora-alocacao')} class="text-slate-300 hover:text-white transition-colors text-sm font-medium">Calculadora</a>
+        <a href={getPath('/sobre')} class="text-slate-300 hover:text-white transition-colors text-sm font-medium">Sobre</a>
       </nav>
-      <div class="hidden md:flex">
-        <a href={getPath('/contato')} class="glass-panel px-4 py-2 text-sm font-medium text-white hover:bg-white/10 transition-colors">
-            Vamos Conversar
+      <div class="flex items-center gap-3">
+        <!-- Theme Toggle Button -->
+        <button
+          type="button"
+          id="theme-toggle"
+          aria-label="Alternar tema claro e escuro"
+          class="p-2 rounded-lg text-slate-400 hover:text-white hover:bg-white/10 transition-colors"
+          title="Alternar tema"
+        >
+          <svg id="theme-icon-sun" class="w-4 h-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+          <svg id="theme-icon-moon" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+        </button>
+
+        <!-- Direct RO.AI Diagnostics Link -->
+        <a
+          href="https://roai.e3m.dev.br"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hidden lg:inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg bg-cyan-950/80 border border-cyan-500/40 text-cyan-300 hover:bg-cyan-900/60 transition shadow-sm"
+          title="Fazer diagnóstico gratuito de ROI de IA em 90s"
+        >
+          <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+          <span>RO.AI Diagnósticos</span>
+          <span>↗</span>
+        </a>
+
+        <a href={getPath('/contato')} class="glass-panel px-4 py-2 text-xs font-semibold text-white hover:bg-white/10 transition-colors rounded-xl">
+          Contato
         </a>
       </div>
     </div>
   </div>
 </header>
+
+<script is:inline>
+  (function() {
+    const btn = document.getElementById('theme-toggle');
+    const sun = document.getElementById('theme-icon-sun');
+    const moon = document.getElementById('theme-icon-moon');
+
+    function updateIcons(isLight) {
+      if (sun && moon) {
+        if (isLight) {
+          sun.classList.remove('hidden');
+          moon.classList.add('hidden');
+        } else {
+          sun.classList.add('hidden');
+          moon.classList.remove('hidden');
+        }
+      }
+    }
+
+    const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+    updateIcons(currentTheme === 'light');
+
+    if (btn) {
+      btn.addEventListener('click', () => {
+        const isCurrentLight = document.documentElement.getAttribute('data-theme') === 'light';
+        const nextTheme = isCurrentLight ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', nextTheme);
+        if (nextTheme === 'light') {
+          document.documentElement.classList.remove('dark');
+          document.documentElement.classList.add('light');
+        } else {
+          document.documentElement.classList.remove('light');
+          document.documentElement.classList.add('dark');
+        }
+        localStorage.setItem('e3m_theme_preference', nextTheme);
+        updateIcons(nextTheme === 'light');
+      });
+    }
+  })();
+</script>

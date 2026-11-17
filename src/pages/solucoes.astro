@@ -1,0 +1,248 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { getPath } from '../utils/paths';
+
+const products = [
+  {
+    slug: 'roai',
+    name: 'RO.AI — Retorno sobre IA',
+    tagline: 'Diagnósticos executivos de maturidade agêntica, automação e FinOps em 90 segundos',
+    badge: 'M1.3 Online • Produção',
+    badgeColor: 'bg-emerald-500/20 text-emerald-300 border-emerald-500/40',
+    liveUrl: 'https://roai.e3m.dev.br',
+    purpose: 'Eliminar o desperdício com projetos de IA mal desenhados por meio de calculadoras rápidas e pareceres consultivos acionáveis fundamentados em retorno financeiro real.',
+    highlights: [
+      '10 diagnósticos especializados (SDD, FinOps, LGPD, RAG vs Fine-tuning)',
+      'Validação de autenticidade instantânea via OTP sem senhas complexas',
+      'Notificação executiva imediata de leads qualificados para a E3M',
+      'Design System Família B + A (E3M Brand Shell)'
+    ],
+    ctaLabel: 'Fazer Diagnóstico Gratuito ↗',
+    iconColor: 'from-cyan-500 to-blue-600',
+    icon: '⚡'
+  },
+  {
+    slug: 'licitools',
+    name: 'Licitools',
+    tagline: 'Motor de inteligência estratégica e copiloto de propostas para licitações públicas',
+    badge: 'M1.3 Online • Cockpit',
+    badgeColor: 'bg-indigo-500/20 text-indigo-300 border-indigo-500/40',
+    liveUrl: 'https://e3m-licitools.web.app',
+    purpose: 'Capturar, desduplicar, ranquear oportunidades por perfil e analisar editais públicos via IA multimodal com geração automatizada de dossiês e propostas comerciais.',
+    highlights: [
+      'Ingestão automatizada do PNCP e 12 portais de compras homologados',
+      'Radar com scoring semântico de 0 a 100 de fit com o seu portfólio',
+      'Split View 50/50 e Command Modal 90vw × 92vh para inspeção de anexos',
+      'Módulo exclusivo para Atas de Registro de Preços (ARPs) e adesão por carona'
+    ],
+    ctaLabel: 'Acessar Cockpit Licitools ↗',
+    iconColor: 'from-indigo-500 to-purple-600',
+    icon: '🏛️'
+  },
+  {
+    slug: 'content-machine',
+    name: 'E3M Content Machine',
+    tagline: 'Workstation editorial B2B para geração multicanal de autoridade e conhecimento',
+    badge: 'M1.3 Online • Studio',
+    badgeColor: 'bg-purple-500/20 text-purple-300 border-purple-500/40',
+    liveUrl: 'https://e3m-content-machine.web.app',
+    purpose: 'Transformar insumos brutos, commits e bastidores técnicos em campanhas corporativas consistentes em 5 canais com validação humana no Gate Copiloto.',
+    highlights: [
+      'Esteira sequencial de 5 estágios com motor 2-tier (Gemini 2.5 Flash)',
+      '5 formatos corporativos: Blog Astro MDX, Newsletter Resend, LinkedIn, X e Google Perfil',
+      'Conexão direta com iscas de lead do RO.AI para conversão de consultoria',
+      'PWA local-first com sincronização segura no Cloud Firestore'
+    ],
+    ctaLabel: 'Conhecer o Content Studio ↗',
+    iconColor: 'from-purple-500 to-pink-600',
+    icon: '✍️'
+  },
+  {
+    slug: 'task-and-job-scout',
+    name: 'TaskAndJobScout',
+    tagline: 'Agente ativo de prospecção autônoma com triagem determinística $0',
+    badge: 'M1.1 Headless • Ativo',
+    badgeColor: 'bg-amber-500/20 text-amber-300 border-amber-500/40',
+    liveUrl: 'https://github.com/MarcioFWeb/task-and-job-scout',
+    purpose: 'Monitorar continuamente o mercado global de contratações assíncronas em USD e gerar kits de candidatura sob medida (CV, pitch e proposal) sem custo de LLM na triagem inicial.',
+    highlights: [
+      'Filtro determinístico de 2 estágios ($0 antes de invocar IA estruturada)',
+      'Multi-profile matcher (.NET/React, Python/AI, E3M B2B Services)',
+      'Application Copilot que monta o kit de candidatura ancorado nos cases reais',
+      'Rotina proativa agendada com digest executivo diário'
+    ],
+    ctaLabel: 'Ver Repositório & Arquitetura ↗',
+    iconColor: 'from-amber-500 to-orange-600',
+    icon: '🎯'
+  }
+];
+---
+
+<Layout 
+  title="Soluções & Portfólio de Produtos | E3M Solutions"
+  description="Conheça as soluções desenvolvidas pela E3M Solutions sob o ciclo de desenvolvimento agêntico (ADLC): RO.AI, Licitools, Content Machine e TaskAndJobScout."
+>
+  <Header />
+
+  <main class="flex-grow pt-24 pb-20 overflow-hidden">
+    <!-- Hero Section -->
+    <section class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-16 text-center">
+      <div class="absolute -top-10 left-1/2 -translate-x-1/2 w-3/4 max-w-3xl h-96 bg-gradient-to-tr from-accent-cyan/15 to-accent-violet/15 blur-3xl pointer-events-none -z-10 rounded-full"></div>
+
+      <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-accent-cyan/10 border border-accent-cyan/30 text-accent-cyan mb-6">
+        <span>Soluções E3M Solutions</span>
+        <span>•</span>
+        <span>Engenharia Pragmática & IA</span>
+      </span>
+
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-6 leading-tight text-white">
+        Produtos & Soluções Desenvolvidos com <br class="hidden sm:inline" />
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-cyan via-blue-400 to-accent-violet">
+          Rigor de Engenharia e IA Ativa
+        </span>
+      </h1>
+
+      <p class="text-base sm:text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed mb-8">
+        Todos os produtos do nosso portfólio nascem como ferramentas internas para a própria E3M (<strong class="text-white">Momento 1 — Cliente Zero</strong>), com pegada 100% ativa, automação contínua e foco em FinOps. Quando atingem maturidade e validação extrema, são disponibilizados como soluções ao mercado.
+      </p>
+
+      <!-- Direct RO.AI Banner Callout -->
+      <div class="max-w-2xl mx-auto p-4 rounded-2xl glass-panel border border-cyan-500/30 flex flex-col sm:flex-row items-center justify-between gap-4 text-left">
+        <div>
+          <span class="text-[10px] font-bold uppercase tracking-wider text-cyan-400">Destaque de Tração</span>
+          <h4 class="text-sm font-bold text-white">Faça o Diagnóstico Gratuito de Maturidade de IA</h4>
+          <p class="text-xs text-slate-300">Descubra em 90 segundos o retorno financeiro real e as oportunidades de automação na sua empresa.</p>
+        </div>
+        <a
+          href="https://roai.e3m.dev.br"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="shrink-0 px-4 py-2 text-xs font-bold text-white bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl shadow hover:opacity-95 transition"
+        >
+          Acessar RO.AI ↗
+        </a>
+      </div>
+    </section>
+
+    <!-- Product Grid Section -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        {products.map((p) => (
+          <div class="glass-card p-8 rounded-2xl border border-white/10 flex flex-col justify-between group hover:border-white/20 transition-all duration-300">
+            <div>
+              <div class="flex items-center justify-between gap-3 mb-4">
+                <div class="flex items-center gap-3">
+                  <div class={`w-12 h-12 rounded-xl bg-gradient-to-tr ${p.iconColor} flex items-center justify-center text-2xl shadow-md`}>
+                    {p.icon}
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-bold text-white group-hover:text-accent-cyan transition-colors">
+                      {p.name}
+                    </h3>
+                    <span class="text-xs text-slate-400">E3M Solutions</span>
+                  </div>
+                </div>
+                <span class={`text-[11px] font-semibold px-2.5 py-1 rounded-full border ${p.badgeColor}`}>
+                  {p.badge}
+                </span>
+              </div>
+
+              <p class="text-sm font-semibold text-slate-200 mb-3">
+                {p.tagline}
+              </p>
+
+              <p class="text-xs text-slate-300 leading-relaxed mb-6">
+                {p.purpose}
+              </p>
+
+              <div class="space-y-2 mb-6 pt-4 border-t border-white/10">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Capacidades Chave:</span>
+                <ul class="space-y-1.5 text-xs text-slate-300">
+                  {p.highlights.map((h) => (
+                    <li class="flex items-start gap-2">
+                      <span class="text-accent-cyan font-bold mt-0.5">✓</span>
+                      <span>{h}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <div class="pt-4 border-t border-white/10 flex items-center justify-between">
+              <a
+                href={p.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 px-4 py-2 text-xs font-bold text-white bg-white/10 hover:bg-white/20 border border-white/20 rounded-xl transition"
+              >
+                <span>{p.ctaLabel}</span>
+              </a>
+              <span class="text-[11px] text-slate-400 font-mono">
+                Padrão ADLC v1.0
+              </span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Methodology & Guarantees Section -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="glass-panel p-8 md:p-12 rounded-3xl border border-white/15">
+        <div class="max-w-3xl mx-auto text-center mb-10">
+          <span class="text-xs font-bold uppercase tracking-widest text-accent-cyan">Metodologia Exclusiva</span>
+          <h2 class="text-2xl md:text-3xl font-extrabold text-white mt-2">
+            Como Desenhamos & Construímos Tecnologia sem Improvisos
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-300 mt-3 leading-relaxed">
+            Nossas soluções seguem os mesmos pilares aplicados em consultorias corporativas de alta exigência:
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+          <div class="p-5 rounded-xl bg-white/5 border border-white/10">
+            <div class="text-accent-cyan font-bold text-sm mb-2">1. Spec-Driven Development (SDD)</div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Especificações rigorosas com requisitos EARS, contratos de dados explícitos e critérios de aceitação verificados antes de qualquer linha de código.
+            </p>
+          </div>
+
+          <div class="p-5 rounded-xl bg-white/5 border border-white/10">
+            <div class="text-accent-violet font-bold text-sm mb-2">2. FinOps & Zero Over-Engineering</div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Arquiteturas serverless desacopladas no GCP e AWS com custo próximo de zero em repouso e sem camadas desnecessárias de complexidade.
+            </p>
+          </div>
+
+          <div class="p-5 rounded-xl bg-white/5 border border-white/10">
+            <div class="text-emerald-400 font-bold text-sm mb-2">3. Proatividade & Pegada Ativa</div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Sistemas que notificam, alertam e operam de forma proativa para o operador, eliminando o esforço de consultas manuais repetitivas.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center">
+      <h3 class="text-2xl md:text-3xl font-extrabold text-white mb-4">
+        Precisa de uma solução corporativa com este nível de engenharia?
+      </h3>
+      <p class="text-slate-300 text-sm max-w-xl mx-auto mb-6">
+        Converse diretamente com nosso time técnico para avaliar discovery, viabilidade e desenvolvimento em ondas.
+      </p>
+      <a
+        href={getPath('/contato')}
+        class="inline-flex items-center gap-2 px-8 py-4 font-semibold text-white bg-gradient-to-r from-accent-cyan to-accent-violet rounded-xl shadow-lg shadow-accent-cyan/20 hover:opacity-95 transition"
+      >
+        <span>Agendar Conversa com Especialista</span>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+      </a>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

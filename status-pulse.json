@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0",
+  "project_slug": "e3m-portal-tech",
+  "product_name": "Site E3M (Tech Portal)",
+  "moment": "M1.3",
+  "updated_at_iso": "2026-11-17T08:35:00Z",
+  "purpose": "Portal institucional de autoridade técnica, cases reais (12+) e conversão de consultorias B2B com ponte ativa para o RO.AI.",
+  "health_status": "OK",
+  "value_metrics": {
+    "headline": "26 artigos técnicos MDX • 14 cases de clientes • Ponte direta com RO.AI (roai.e3m.dev.br)",
+    "items_processed_30d": 35,
+    "actionable_outputs_30d": 18,
+    "estimated_hours_saved_30d": 24.0
+  },
+  "active_routines": [
+    {
+      "id": "astro-build-deploy",
+      "description": "Build estático otimizado com Astro v5 + Tailwind CSS e hosting serverless",
+      "schedule": "on-git-push",
+      "last_run_at_iso": "2026-11-17T08:27:00Z",
+      "last_status": "OK"
+    },
+    {
+      "id": "content-machine-intake",
+      "description": "Recepção de artigos MDX gerados pela Content Machine via PR com esquema Zod auditado",
+      "schedule": "weekly",
+      "last_run_at_iso": "2026-11-17T08:20:00Z",
+      "last_status": "OK"
+    }
+  ],
+  "finops_cost": {
+    "currency": "USD",
+    "infra_monthly_usd": 0.0,
+    "database_monthly_usd": 0.0,
+    "ai_tokens_monthly_usd": 0.0,
+    "total_monthly_usd": 0.0,
+    "budget_cap_usd": 1.0
+  }
+}
